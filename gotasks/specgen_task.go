@@ -593,16 +593,18 @@ func (client *{{$srvIdent}}) {{.Name}}({{range $winargs -}}
 ) ({{range $woutargs -}}
 {{.AsParameter}}, {{end}} err error) {
 	// Request structure.
-	request := {{if $winargs}}&{{template "argstruct" $winargs}}{{"{}"}}{{else}}{{"interface{}(nil)"}}{{end}}
+	request := {{if $winargs}}&{{template "reqStruct" $winargs}}{{"{}"}}{{else}}{{"interface{}(nil)"}}{{end}}
 	// BEGIN Marshal arguments into request.
 {{range $winargs}}
-	if request.{{.Name}}, err = {{.Marshal}}; err != nil {
+	if v, err = {{.Marshal}}; err != nil {
 		return
+	} else {
+		request.{{.Name}} = soap.EscapeXMLText(v)
 	}{{end}}
 	// END Marshal arguments into request.
 
 	// Response structure.
-	response := {{if $woutargs}}&{{template "argstruct" $woutargs}}{{"{}"}}{{else}}{{"interface{}(nil)"}}{{end}}
+	response := {{if $woutargs}}&{{template "respStruct" $woutargs}}{{"{}"}}{{else}}{{"interface{}(nil)"}}{{end}}
 
 	// Perform the SOAP call.
 	if err = client.SOAPClient.PerformAction({{$srv.URNParts.Const}}, "{{.Name}}", request, response); err != nil {
@@ -620,7 +622,11 @@ func (client *{{$srvIdent}}) {{.Name}}({{range $winargs -}}
 {{end}}
 {{end}}
 
-{{define "argstruct"}}struct {{"{"}}
+{{define "reqStruct"}}struct {{"{"}}
+{{range .}}{{.Name}} string ` + "`xml:\",innerxml\"`" + `
+{{end}}{{"}"}}{{end}}
+
+{{define "respStruct"}}struct {{"{"}}
 {{range .}}{{.Name}} string
 {{end}}{{"}"}}{{end}}
 `))

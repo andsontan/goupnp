@@ -103,12 +103,14 @@ func newLANHostConfigManagement1ClientsFromGenericClients(genericClients []goupn
 func (client *LANHostConfigManagement1) SetDHCPServerConfigurable(NewDHCPServerConfigurable bool) (err error) {
 	// Request structure.
 	request := &struct {
-		NewDHCPServerConfigurable string
+		NewDHCPServerConfigurable string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewDHCPServerConfigurable, err = soap.MarshalBoolean(NewDHCPServerConfigurable); err != nil {
+	if v, err = soap.MarshalBoolean(NewDHCPServerConfigurable); err != nil {
 		return
+	} else {
+		request.NewDHCPServerConfigurable = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -155,12 +157,14 @@ func (client *LANHostConfigManagement1) GetDHCPServerConfigurable() (NewDHCPServ
 func (client *LANHostConfigManagement1) SetDHCPRelay(NewDHCPRelay bool) (err error) {
 	// Request structure.
 	request := &struct {
-		NewDHCPRelay string
+		NewDHCPRelay string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewDHCPRelay, err = soap.MarshalBoolean(NewDHCPRelay); err != nil {
+	if v, err = soap.MarshalBoolean(NewDHCPRelay); err != nil {
 		return
+	} else {
+		request.NewDHCPRelay = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -207,12 +211,14 @@ func (client *LANHostConfigManagement1) GetDHCPRelay() (NewDHCPRelay bool, err e
 func (client *LANHostConfigManagement1) SetSubnetMask(NewSubnetMask string) (err error) {
 	// Request structure.
 	request := &struct {
-		NewSubnetMask string
+		NewSubnetMask string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewSubnetMask, err = soap.MarshalString(NewSubnetMask); err != nil {
+	if v, err = soap.MarshalString(NewSubnetMask); err != nil {
 		return
+	} else {
+		request.NewSubnetMask = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -259,12 +265,14 @@ func (client *LANHostConfigManagement1) GetSubnetMask() (NewSubnetMask string, e
 func (client *LANHostConfigManagement1) SetIPRouter(NewIPRouters string) (err error) {
 	// Request structure.
 	request := &struct {
-		NewIPRouters string
+		NewIPRouters string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewIPRouters, err = soap.MarshalString(NewIPRouters); err != nil {
+	if v, err = soap.MarshalString(NewIPRouters); err != nil {
 		return
+	} else {
+		request.NewIPRouters = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -285,12 +293,14 @@ func (client *LANHostConfigManagement1) SetIPRouter(NewIPRouters string) (err er
 func (client *LANHostConfigManagement1) DeleteIPRouter(NewIPRouters string) (err error) {
 	// Request structure.
 	request := &struct {
-		NewIPRouters string
+		NewIPRouters string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewIPRouters, err = soap.MarshalString(NewIPRouters); err != nil {
+	if v, err = soap.MarshalString(NewIPRouters); err != nil {
 		return
+	} else {
+		request.NewIPRouters = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -337,12 +347,14 @@ func (client *LANHostConfigManagement1) GetIPRoutersList() (NewIPRouters string,
 func (client *LANHostConfigManagement1) SetDomainName(NewDomainName string) (err error) {
 	// Request structure.
 	request := &struct {
-		NewDomainName string
+		NewDomainName string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewDomainName, err = soap.MarshalString(NewDomainName); err != nil {
+	if v, err = soap.MarshalString(NewDomainName); err != nil {
 		return
+	} else {
+		request.NewDomainName = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -389,16 +401,20 @@ func (client *LANHostConfigManagement1) GetDomainName() (NewDomainName string, e
 func (client *LANHostConfigManagement1) SetAddressRange(NewMinAddress string, NewMaxAddress string) (err error) {
 	// Request structure.
 	request := &struct {
-		NewMinAddress string
-		NewMaxAddress string
+		NewMinAddress string `xml:",innerxml"`
+		NewMaxAddress string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewMinAddress, err = soap.MarshalString(NewMinAddress); err != nil {
+	if v, err = soap.MarshalString(NewMinAddress); err != nil {
 		return
+	} else {
+		request.NewMinAddress = soap.EscapeXMLText(v)
 	}
-	if request.NewMaxAddress, err = soap.MarshalString(NewMaxAddress); err != nil {
+	if v, err = soap.MarshalString(NewMaxAddress); err != nil {
 		return
+	} else {
+		request.NewMaxAddress = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -449,12 +465,14 @@ func (client *LANHostConfigManagement1) GetAddressRange() (NewMinAddress string,
 func (client *LANHostConfigManagement1) SetReservedAddress(NewReservedAddresses string) (err error) {
 	// Request structure.
 	request := &struct {
-		NewReservedAddresses string
+		NewReservedAddresses string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewReservedAddresses, err = soap.MarshalString(NewReservedAddresses); err != nil {
+	if v, err = soap.MarshalString(NewReservedAddresses); err != nil {
 		return
+	} else {
+		request.NewReservedAddresses = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -475,12 +493,14 @@ func (client *LANHostConfigManagement1) SetReservedAddress(NewReservedAddresses 
 func (client *LANHostConfigManagement1) DeleteReservedAddress(NewReservedAddresses string) (err error) {
 	// Request structure.
 	request := &struct {
-		NewReservedAddresses string
+		NewReservedAddresses string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewReservedAddresses, err = soap.MarshalString(NewReservedAddresses); err != nil {
+	if v, err = soap.MarshalString(NewReservedAddresses); err != nil {
 		return
+	} else {
+		request.NewReservedAddresses = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -527,12 +547,14 @@ func (client *LANHostConfigManagement1) GetReservedAddresses() (NewReservedAddre
 func (client *LANHostConfigManagement1) SetDNSServer(NewDNSServers string) (err error) {
 	// Request structure.
 	request := &struct {
-		NewDNSServers string
+		NewDNSServers string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewDNSServers, err = soap.MarshalString(NewDNSServers); err != nil {
+	if v, err = soap.MarshalString(NewDNSServers); err != nil {
 		return
+	} else {
+		request.NewDNSServers = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -553,12 +575,14 @@ func (client *LANHostConfigManagement1) SetDNSServer(NewDNSServers string) (err 
 func (client *LANHostConfigManagement1) DeleteDNSServer(NewDNSServers string) (err error) {
 	// Request structure.
 	request := &struct {
-		NewDNSServers string
+		NewDNSServers string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewDNSServers, err = soap.MarshalString(NewDNSServers); err != nil {
+	if v, err = soap.MarshalString(NewDNSServers); err != nil {
 		return
+	} else {
+		request.NewDNSServers = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -665,12 +689,14 @@ func newLayer3Forwarding1ClientsFromGenericClients(genericClients []goupnp.Servi
 func (client *Layer3Forwarding1) SetDefaultConnectionService(NewDefaultConnectionService string) (err error) {
 	// Request structure.
 	request := &struct {
-		NewDefaultConnectionService string
+		NewDefaultConnectionService string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewDefaultConnectionService, err = soap.MarshalString(NewDefaultConnectionService); err != nil {
+	if v, err = soap.MarshalString(NewDefaultConnectionService); err != nil {
 		return
+	} else {
+		request.NewDefaultConnectionService = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -1115,12 +1141,14 @@ func newWANCommonInterfaceConfig1ClientsFromGenericClients(genericClients []goup
 func (client *WANCommonInterfaceConfig1) SetEnabledForInternet(NewEnabledForInternet bool) (err error) {
 	// Request structure.
 	request := &struct {
-		NewEnabledForInternet string
+		NewEnabledForInternet string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewEnabledForInternet, err = soap.MarshalBoolean(NewEnabledForInternet); err != nil {
+	if v, err = soap.MarshalBoolean(NewEnabledForInternet); err != nil {
 		return
+	} else {
+		request.NewEnabledForInternet = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -1371,12 +1399,14 @@ func (client *WANCommonInterfaceConfig1) GetTotalPacketsReceived() (NewTotalPack
 func (client *WANCommonInterfaceConfig1) GetActiveConnection(NewActiveConnectionIndex uint16) (NewActiveConnDeviceContainer string, NewActiveConnectionServiceID string, err error) {
 	// Request structure.
 	request := &struct {
-		NewActiveConnectionIndex string
+		NewActiveConnectionIndex string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewActiveConnectionIndex, err = soap.MarshalUi2(NewActiveConnectionIndex); err != nil {
+	if v, err = soap.MarshalUi2(NewActiveConnectionIndex); err != nil {
 		return
+	} else {
+		request.NewActiveConnectionIndex = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -1466,12 +1496,14 @@ func newWANDSLLinkConfig1ClientsFromGenericClients(genericClients []goupnp.Servi
 func (client *WANDSLLinkConfig1) SetDSLLinkType(NewLinkType string) (err error) {
 	// Request structure.
 	request := &struct {
-		NewLinkType string
+		NewLinkType string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewLinkType, err = soap.MarshalString(NewLinkType); err != nil {
+	if v, err = soap.MarshalString(NewLinkType); err != nil {
 		return
+	} else {
+		request.NewLinkType = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -1578,12 +1610,14 @@ func (client *WANDSLLinkConfig1) GetModulationType() (NewModulationType string, 
 func (client *WANDSLLinkConfig1) SetDestinationAddress(NewDestinationAddress string) (err error) {
 	// Request structure.
 	request := &struct {
-		NewDestinationAddress string
+		NewDestinationAddress string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewDestinationAddress, err = soap.MarshalString(NewDestinationAddress); err != nil {
+	if v, err = soap.MarshalString(NewDestinationAddress); err != nil {
 		return
+	} else {
+		request.NewDestinationAddress = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -1630,12 +1664,14 @@ func (client *WANDSLLinkConfig1) GetDestinationAddress() (NewDestinationAddress 
 func (client *WANDSLLinkConfig1) SetATMEncapsulation(NewATMEncapsulation string) (err error) {
 	// Request structure.
 	request := &struct {
-		NewATMEncapsulation string
+		NewATMEncapsulation string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewATMEncapsulation, err = soap.MarshalString(NewATMEncapsulation); err != nil {
+	if v, err = soap.MarshalString(NewATMEncapsulation); err != nil {
 		return
+	} else {
+		request.NewATMEncapsulation = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -1682,12 +1718,14 @@ func (client *WANDSLLinkConfig1) GetATMEncapsulation() (NewATMEncapsulation stri
 func (client *WANDSLLinkConfig1) SetFCSPreserved(NewFCSPreserved bool) (err error) {
 	// Request structure.
 	request := &struct {
-		NewFCSPreserved string
+		NewFCSPreserved string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewFCSPreserved, err = soap.MarshalBoolean(NewFCSPreserved); err != nil {
+	if v, err = soap.MarshalBoolean(NewFCSPreserved); err != nil {
 		return
+	} else {
+		request.NewFCSPreserved = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -1884,12 +1922,14 @@ func newWANIPConnection1ClientsFromGenericClients(genericClients []goupnp.Servic
 func (client *WANIPConnection1) SetConnectionType(NewConnectionType string) (err error) {
 	// Request structure.
 	request := &struct {
-		NewConnectionType string
+		NewConnectionType string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewConnectionType, err = soap.MarshalString(NewConnectionType); err != nil {
+	if v, err = soap.MarshalString(NewConnectionType); err != nil {
 		return
+	} else {
+		request.NewConnectionType = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -2007,12 +2047,14 @@ func (client *WANIPConnection1) ForceTermination() (err error) {
 func (client *WANIPConnection1) SetAutoDisconnectTime(NewAutoDisconnectTime uint32) (err error) {
 	// Request structure.
 	request := &struct {
-		NewAutoDisconnectTime string
+		NewAutoDisconnectTime string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewAutoDisconnectTime, err = soap.MarshalUi4(NewAutoDisconnectTime); err != nil {
+	if v, err = soap.MarshalUi4(NewAutoDisconnectTime); err != nil {
 		return
+	} else {
+		request.NewAutoDisconnectTime = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -2033,12 +2075,14 @@ func (client *WANIPConnection1) SetAutoDisconnectTime(NewAutoDisconnectTime uint
 func (client *WANIPConnection1) SetIdleDisconnectTime(NewIdleDisconnectTime uint32) (err error) {
 	// Request structure.
 	request := &struct {
-		NewIdleDisconnectTime string
+		NewIdleDisconnectTime string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewIdleDisconnectTime, err = soap.MarshalUi4(NewIdleDisconnectTime); err != nil {
+	if v, err = soap.MarshalUi4(NewIdleDisconnectTime); err != nil {
 		return
+	} else {
+		request.NewIdleDisconnectTime = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -2059,12 +2103,14 @@ func (client *WANIPConnection1) SetIdleDisconnectTime(NewIdleDisconnectTime uint
 func (client *WANIPConnection1) SetWarnDisconnectDelay(NewWarnDisconnectDelay uint32) (err error) {
 	// Request structure.
 	request := &struct {
-		NewWarnDisconnectDelay string
+		NewWarnDisconnectDelay string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewWarnDisconnectDelay, err = soap.MarshalUi4(NewWarnDisconnectDelay); err != nil {
+	if v, err = soap.MarshalUi4(NewWarnDisconnectDelay); err != nil {
 		return
+	} else {
+		request.NewWarnDisconnectDelay = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -2237,12 +2283,14 @@ func (client *WANIPConnection1) GetNATRSIPStatus() (NewRSIPAvailable bool, NewNA
 func (client *WANIPConnection1) GetGenericPortMappingEntry(NewPortMappingIndex uint16) (NewRemoteHost string, NewExternalPort uint16, NewProtocol string, NewInternalPort uint16, NewInternalClient string, NewEnabled bool, NewPortMappingDescription string, NewLeaseDuration uint32, err error) {
 	// Request structure.
 	request := &struct {
-		NewPortMappingIndex string
+		NewPortMappingIndex string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewPortMappingIndex, err = soap.MarshalUi2(NewPortMappingIndex); err != nil {
+	if v, err = soap.MarshalUi2(NewPortMappingIndex); err != nil {
 		return
+	} else {
+		request.NewPortMappingIndex = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -2301,20 +2349,26 @@ func (client *WANIPConnection1) GetGenericPortMappingEntry(NewPortMappingIndex u
 func (client *WANIPConnection1) GetSpecificPortMappingEntry(NewRemoteHost string, NewExternalPort uint16, NewProtocol string) (NewInternalPort uint16, NewInternalClient string, NewEnabled bool, NewPortMappingDescription string, NewLeaseDuration uint32, err error) {
 	// Request structure.
 	request := &struct {
-		NewRemoteHost   string
-		NewExternalPort string
-		NewProtocol     string
+		NewRemoteHost   string `xml:",innerxml"`
+		NewExternalPort string `xml:",innerxml"`
+		NewProtocol     string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewRemoteHost, err = soap.MarshalString(NewRemoteHost); err != nil {
+	if v, err = soap.MarshalString(NewRemoteHost); err != nil {
 		return
+	} else {
+		request.NewRemoteHost = soap.EscapeXMLText(v)
 	}
-	if request.NewExternalPort, err = soap.MarshalUi2(NewExternalPort); err != nil {
+	if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
 		return
+	} else {
+		request.NewExternalPort = soap.EscapeXMLText(v)
 	}
-	if request.NewProtocol, err = soap.MarshalString(NewProtocol); err != nil {
+	if v, err = soap.MarshalString(NewProtocol); err != nil {
 		return
+	} else {
+		request.NewProtocol = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -2361,40 +2415,56 @@ func (client *WANIPConnection1) GetSpecificPortMappingEntry(NewRemoteHost string
 func (client *WANIPConnection1) AddPortMapping(NewRemoteHost string, NewExternalPort uint16, NewProtocol string, NewInternalPort uint16, NewInternalClient string, NewEnabled bool, NewPortMappingDescription string, NewLeaseDuration uint32) (err error) {
 	// Request structure.
 	request := &struct {
-		NewRemoteHost             string
-		NewExternalPort           string
-		NewProtocol               string
-		NewInternalPort           string
-		NewInternalClient         string
-		NewEnabled                string
-		NewPortMappingDescription string
-		NewLeaseDuration          string
+		NewRemoteHost             string `xml:",innerxml"`
+		NewExternalPort           string `xml:",innerxml"`
+		NewProtocol               string `xml:",innerxml"`
+		NewInternalPort           string `xml:",innerxml"`
+		NewInternalClient         string `xml:",innerxml"`
+		NewEnabled                string `xml:",innerxml"`
+		NewPortMappingDescription string `xml:",innerxml"`
+		NewLeaseDuration          string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewRemoteHost, err = soap.MarshalString(NewRemoteHost); err != nil {
+	if v, err = soap.MarshalString(NewRemoteHost); err != nil {
 		return
+	} else {
+		request.NewRemoteHost = soap.EscapeXMLText(v)
 	}
-	if request.NewExternalPort, err = soap.MarshalUi2(NewExternalPort); err != nil {
+	if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
 		return
+	} else {
+		request.NewExternalPort = soap.EscapeXMLText(v)
 	}
-	if request.NewProtocol, err = soap.MarshalString(NewProtocol); err != nil {
+	if v, err = soap.MarshalString(NewProtocol); err != nil {
 		return
+	} else {
+		request.NewProtocol = soap.EscapeXMLText(v)
 	}
-	if request.NewInternalPort, err = soap.MarshalUi2(NewInternalPort); err != nil {
+	if v, err = soap.MarshalUi2(NewInternalPort); err != nil {
 		return
+	} else {
+		request.NewInternalPort = soap.EscapeXMLText(v)
 	}
-	if request.NewInternalClient, err = soap.MarshalString(NewInternalClient); err != nil {
+	if v, err = soap.MarshalString(NewInternalClient); err != nil {
 		return
+	} else {
+		request.NewInternalClient = soap.EscapeXMLText(v)
 	}
-	if request.NewEnabled, err = soap.MarshalBoolean(NewEnabled); err != nil {
+	if v, err = soap.MarshalBoolean(NewEnabled); err != nil {
 		return
+	} else {
+		request.NewEnabled = soap.EscapeXMLText(v)
 	}
-	if request.NewPortMappingDescription, err = soap.MarshalString(NewPortMappingDescription); err != nil {
+	if v, err = soap.MarshalString(NewPortMappingDescription); err != nil {
 		return
+	} else {
+		request.NewPortMappingDescription = soap.EscapeXMLText(v)
 	}
-	if request.NewLeaseDuration, err = soap.MarshalUi4(NewLeaseDuration); err != nil {
+	if v, err = soap.MarshalUi4(NewLeaseDuration); err != nil {
 		return
+	} else {
+		request.NewLeaseDuration = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -2420,20 +2490,26 @@ func (client *WANIPConnection1) AddPortMapping(NewRemoteHost string, NewExternal
 func (client *WANIPConnection1) DeletePortMapping(NewRemoteHost string, NewExternalPort uint16, NewProtocol string) (err error) {
 	// Request structure.
 	request := &struct {
-		NewRemoteHost   string
-		NewExternalPort string
-		NewProtocol     string
+		NewRemoteHost   string `xml:",innerxml"`
+		NewExternalPort string `xml:",innerxml"`
+		NewProtocol     string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewRemoteHost, err = soap.MarshalString(NewRemoteHost); err != nil {
+	if v, err = soap.MarshalString(NewRemoteHost); err != nil {
 		return
+	} else {
+		request.NewRemoteHost = soap.EscapeXMLText(v)
 	}
-	if request.NewExternalPort, err = soap.MarshalUi2(NewExternalPort); err != nil {
+	if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
 		return
+	} else {
+		request.NewExternalPort = soap.EscapeXMLText(v)
 	}
-	if request.NewProtocol, err = soap.MarshalString(NewProtocol); err != nil {
+	if v, err = soap.MarshalString(NewProtocol); err != nil {
 		return
+	} else {
+		request.NewProtocol = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -2545,20 +2621,26 @@ func newWANPOTSLinkConfig1ClientsFromGenericClients(genericClients []goupnp.Serv
 func (client *WANPOTSLinkConfig1) SetISPInfo(NewISPPhoneNumber string, NewISPInfo string, NewLinkType string) (err error) {
 	// Request structure.
 	request := &struct {
-		NewISPPhoneNumber string
-		NewISPInfo        string
-		NewLinkType       string
+		NewISPPhoneNumber string `xml:",innerxml"`
+		NewISPInfo        string `xml:",innerxml"`
+		NewLinkType       string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewISPPhoneNumber, err = soap.MarshalString(NewISPPhoneNumber); err != nil {
+	if v, err = soap.MarshalString(NewISPPhoneNumber); err != nil {
 		return
+	} else {
+		request.NewISPPhoneNumber = soap.EscapeXMLText(v)
 	}
-	if request.NewISPInfo, err = soap.MarshalString(NewISPInfo); err != nil {
+	if v, err = soap.MarshalString(NewISPInfo); err != nil {
 		return
+	} else {
+		request.NewISPInfo = soap.EscapeXMLText(v)
 	}
-	if request.NewLinkType, err = soap.MarshalString(NewLinkType); err != nil {
+	if v, err = soap.MarshalString(NewLinkType); err != nil {
 		return
+	} else {
+		request.NewLinkType = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -2579,16 +2661,20 @@ func (client *WANPOTSLinkConfig1) SetISPInfo(NewISPPhoneNumber string, NewISPInf
 func (client *WANPOTSLinkConfig1) SetCallRetryInfo(NewNumberOfRetries uint32, NewDelayBetweenRetries uint32) (err error) {
 	// Request structure.
 	request := &struct {
-		NewNumberOfRetries     string
-		NewDelayBetweenRetries string
+		NewNumberOfRetries     string `xml:",innerxml"`
+		NewDelayBetweenRetries string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewNumberOfRetries, err = soap.MarshalUi4(NewNumberOfRetries); err != nil {
+	if v, err = soap.MarshalUi4(NewNumberOfRetries); err != nil {
 		return
+	} else {
+		request.NewNumberOfRetries = soap.EscapeXMLText(v)
 	}
-	if request.NewDelayBetweenRetries, err = soap.MarshalUi4(NewDelayBetweenRetries); err != nil {
+	if v, err = soap.MarshalUi4(NewDelayBetweenRetries); err != nil {
 		return
+	} else {
+		request.NewDelayBetweenRetries = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -2867,12 +2953,14 @@ func newWANPPPConnection1ClientsFromGenericClients(genericClients []goupnp.Servi
 func (client *WANPPPConnection1) SetConnectionType(NewConnectionType string) (err error) {
 	// Request structure.
 	request := &struct {
-		NewConnectionType string
+		NewConnectionType string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewConnectionType, err = soap.MarshalString(NewConnectionType); err != nil {
+	if v, err = soap.MarshalString(NewConnectionType); err != nil {
 		return
+	} else {
+		request.NewConnectionType = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -2927,16 +3015,20 @@ func (client *WANPPPConnection1) GetConnectionTypeInfo() (NewConnectionType stri
 func (client *WANPPPConnection1) ConfigureConnection(NewUserName string, NewPassword string) (err error) {
 	// Request structure.
 	request := &struct {
-		NewUserName string
-		NewPassword string
+		NewUserName string `xml:",innerxml"`
+		NewPassword string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewUserName, err = soap.MarshalString(NewUserName); err != nil {
+	if v, err = soap.MarshalString(NewUserName); err != nil {
 		return
+	} else {
+		request.NewUserName = soap.EscapeXMLText(v)
 	}
-	if request.NewPassword, err = soap.MarshalString(NewPassword); err != nil {
+	if v, err = soap.MarshalString(NewPassword); err != nil {
 		return
+	} else {
+		request.NewPassword = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -3020,12 +3112,14 @@ func (client *WANPPPConnection1) ForceTermination() (err error) {
 func (client *WANPPPConnection1) SetAutoDisconnectTime(NewAutoDisconnectTime uint32) (err error) {
 	// Request structure.
 	request := &struct {
-		NewAutoDisconnectTime string
+		NewAutoDisconnectTime string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewAutoDisconnectTime, err = soap.MarshalUi4(NewAutoDisconnectTime); err != nil {
+	if v, err = soap.MarshalUi4(NewAutoDisconnectTime); err != nil {
 		return
+	} else {
+		request.NewAutoDisconnectTime = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -3046,12 +3140,14 @@ func (client *WANPPPConnection1) SetAutoDisconnectTime(NewAutoDisconnectTime uin
 func (client *WANPPPConnection1) SetIdleDisconnectTime(NewIdleDisconnectTime uint32) (err error) {
 	// Request structure.
 	request := &struct {
-		NewIdleDisconnectTime string
+		NewIdleDisconnectTime string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewIdleDisconnectTime, err = soap.MarshalUi4(NewIdleDisconnectTime); err != nil {
+	if v, err = soap.MarshalUi4(NewIdleDisconnectTime); err != nil {
 		return
+	} else {
+		request.NewIdleDisconnectTime = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -3072,12 +3168,14 @@ func (client *WANPPPConnection1) SetIdleDisconnectTime(NewIdleDisconnectTime uin
 func (client *WANPPPConnection1) SetWarnDisconnectDelay(NewWarnDisconnectDelay uint32) (err error) {
 	// Request structure.
 	request := &struct {
-		NewWarnDisconnectDelay string
+		NewWarnDisconnectDelay string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewWarnDisconnectDelay, err = soap.MarshalUi4(NewWarnDisconnectDelay); err != nil {
+	if v, err = soap.MarshalUi4(NewWarnDisconnectDelay); err != nil {
 		return
+	} else {
+		request.NewWarnDisconnectDelay = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -3410,12 +3508,14 @@ func (client *WANPPPConnection1) GetNATRSIPStatus() (NewRSIPAvailable bool, NewN
 func (client *WANPPPConnection1) GetGenericPortMappingEntry(NewPortMappingIndex uint16) (NewRemoteHost string, NewExternalPort uint16, NewProtocol string, NewInternalPort uint16, NewInternalClient string, NewEnabled bool, NewPortMappingDescription string, NewLeaseDuration uint32, err error) {
 	// Request structure.
 	request := &struct {
-		NewPortMappingIndex string
+		NewPortMappingIndex string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewPortMappingIndex, err = soap.MarshalUi2(NewPortMappingIndex); err != nil {
+	if v, err = soap.MarshalUi2(NewPortMappingIndex); err != nil {
 		return
+	} else {
+		request.NewPortMappingIndex = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -3474,20 +3574,26 @@ func (client *WANPPPConnection1) GetGenericPortMappingEntry(NewPortMappingIndex 
 func (client *WANPPPConnection1) GetSpecificPortMappingEntry(NewRemoteHost string, NewExternalPort uint16, NewProtocol string) (NewInternalPort uint16, NewInternalClient string, NewEnabled bool, NewPortMappingDescription string, NewLeaseDuration uint32, err error) {
 	// Request structure.
 	request := &struct {
-		NewRemoteHost   string
-		NewExternalPort string
-		NewProtocol     string
+		NewRemoteHost   string `xml:",innerxml"`
+		NewExternalPort string `xml:",innerxml"`
+		NewProtocol     string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewRemoteHost, err = soap.MarshalString(NewRemoteHost); err != nil {
+	if v, err = soap.MarshalString(NewRemoteHost); err != nil {
 		return
+	} else {
+		request.NewRemoteHost = soap.EscapeXMLText(v)
 	}
-	if request.NewExternalPort, err = soap.MarshalUi2(NewExternalPort); err != nil {
+	if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
 		return
+	} else {
+		request.NewExternalPort = soap.EscapeXMLText(v)
 	}
-	if request.NewProtocol, err = soap.MarshalString(NewProtocol); err != nil {
+	if v, err = soap.MarshalString(NewProtocol); err != nil {
 		return
+	} else {
+		request.NewProtocol = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -3534,40 +3640,56 @@ func (client *WANPPPConnection1) GetSpecificPortMappingEntry(NewRemoteHost strin
 func (client *WANPPPConnection1) AddPortMapping(NewRemoteHost string, NewExternalPort uint16, NewProtocol string, NewInternalPort uint16, NewInternalClient string, NewEnabled bool, NewPortMappingDescription string, NewLeaseDuration uint32) (err error) {
 	// Request structure.
 	request := &struct {
-		NewRemoteHost             string
-		NewExternalPort           string
-		NewProtocol               string
-		NewInternalPort           string
-		NewInternalClient         string
-		NewEnabled                string
-		NewPortMappingDescription string
-		NewLeaseDuration          string
+		NewRemoteHost             string `xml:",innerxml"`
+		NewExternalPort           string `xml:",innerxml"`
+		NewProtocol               string `xml:",innerxml"`
+		NewInternalPort           string `xml:",innerxml"`
+		NewInternalClient         string `xml:",innerxml"`
+		NewEnabled                string `xml:",innerxml"`
+		NewPortMappingDescription string `xml:",innerxml"`
+		NewLeaseDuration          string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewRemoteHost, err = soap.MarshalString(NewRemoteHost); err != nil {
+	if v, err = soap.MarshalString(NewRemoteHost); err != nil {
 		return
+	} else {
+		request.NewRemoteHost = soap.EscapeXMLText(v)
 	}
-	if request.NewExternalPort, err = soap.MarshalUi2(NewExternalPort); err != nil {
+	if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
 		return
+	} else {
+		request.NewExternalPort = soap.EscapeXMLText(v)
 	}
-	if request.NewProtocol, err = soap.MarshalString(NewProtocol); err != nil {
+	if v, err = soap.MarshalString(NewProtocol); err != nil {
 		return
+	} else {
+		request.NewProtocol = soap.EscapeXMLText(v)
 	}
-	if request.NewInternalPort, err = soap.MarshalUi2(NewInternalPort); err != nil {
+	if v, err = soap.MarshalUi2(NewInternalPort); err != nil {
 		return
+	} else {
+		request.NewInternalPort = soap.EscapeXMLText(v)
 	}
-	if request.NewInternalClient, err = soap.MarshalString(NewInternalClient); err != nil {
+	if v, err = soap.MarshalString(NewInternalClient); err != nil {
 		return
+	} else {
+		request.NewInternalClient = soap.EscapeXMLText(v)
 	}
-	if request.NewEnabled, err = soap.MarshalBoolean(NewEnabled); err != nil {
+	if v, err = soap.MarshalBoolean(NewEnabled); err != nil {
 		return
+	} else {
+		request.NewEnabled = soap.EscapeXMLText(v)
 	}
-	if request.NewPortMappingDescription, err = soap.MarshalString(NewPortMappingDescription); err != nil {
+	if v, err = soap.MarshalString(NewPortMappingDescription); err != nil {
 		return
+	} else {
+		request.NewPortMappingDescription = soap.EscapeXMLText(v)
 	}
-	if request.NewLeaseDuration, err = soap.MarshalUi4(NewLeaseDuration); err != nil {
+	if v, err = soap.MarshalUi4(NewLeaseDuration); err != nil {
 		return
+	} else {
+		request.NewLeaseDuration = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
@@ -3593,20 +3715,26 @@ func (client *WANPPPConnection1) AddPortMapping(NewRemoteHost string, NewExterna
 func (client *WANPPPConnection1) DeletePortMapping(NewRemoteHost string, NewExternalPort uint16, NewProtocol string) (err error) {
 	// Request structure.
 	request := &struct {
-		NewRemoteHost   string
-		NewExternalPort string
-		NewProtocol     string
+		NewRemoteHost   string `xml:",innerxml"`
+		NewExternalPort string `xml:",innerxml"`
+		NewProtocol     string `xml:",innerxml"`
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if request.NewRemoteHost, err = soap.MarshalString(NewRemoteHost); err != nil {
+	if v, err = soap.MarshalString(NewRemoteHost); err != nil {
 		return
+	} else {
+		request.NewRemoteHost = soap.EscapeXMLText(v)
 	}
-	if request.NewExternalPort, err = soap.MarshalUi2(NewExternalPort); err != nil {
+	if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
 		return
+	} else {
+		request.NewExternalPort = soap.EscapeXMLText(v)
 	}
-	if request.NewProtocol, err = soap.MarshalString(NewProtocol); err != nil {
+	if v, err = soap.MarshalString(NewProtocol); err != nil {
 		return
+	} else {
+		request.NewProtocol = soap.EscapeXMLText(v)
 	}
 	// END Marshal arguments into request.
 
