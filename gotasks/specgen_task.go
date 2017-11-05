@@ -595,11 +595,14 @@ func (client *{{$srvIdent}}) {{.Name}}({{range $winargs -}}
 	// Request structure.
 	request := {{if $winargs}}&{{template "reqStruct" $winargs}}{{"{}"}}{{else}}{{"interface{}(nil)"}}{{end}}
 	// BEGIN Marshal arguments into request.
-{{range $winargs}}
-	if v, err = {{.Marshal}}; err != nil {
-		return
-	} else {
-		request.{{.Name}} = soap.EscapeXMLText(v)
+	{{range $winargs}}
+	{
+		var v string
+		if v, err = {{.Marshal}}; err != nil {
+			return
+		} else {
+			request.{{.Name}} = soap.EscapeXMLText(v)
+		}
 	}{{end}}
 	// END Marshal arguments into request.
 

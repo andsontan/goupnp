@@ -107,20 +107,29 @@ func (client *AVTransport1) SetAVTransportURI(InstanceID uint32, CurrentURI stri
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(CurrentURI); err != nil {
-		return
-	} else {
-		request.CurrentURI = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(CurrentURI); err != nil {
+			return
+		} else {
+			request.CurrentURI = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(CurrentURIMetaData); err != nil {
-		return
-	} else {
-		request.CurrentURIMetaData = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(CurrentURIMetaData); err != nil {
+			return
+		} else {
+			request.CurrentURIMetaData = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -147,20 +156,29 @@ func (client *AVTransport1) SetNextAVTransportURI(InstanceID uint32, NextURI str
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NextURI); err != nil {
-		return
-	} else {
-		request.NextURI = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NextURI); err != nil {
+			return
+		} else {
+			request.NextURI = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NextURIMetaData); err != nil {
-		return
-	} else {
-		request.NextURIMetaData = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NextURIMetaData); err != nil {
+			return
+		} else {
+			request.NextURIMetaData = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -189,10 +207,13 @@ func (client *AVTransport1) GetMediaInfo(InstanceID uint32) (NrTracks uint32, Me
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -262,10 +283,13 @@ func (client *AVTransport1) GetTransportInfo(InstanceID uint32) (CurrentTranspor
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -307,10 +331,13 @@ func (client *AVTransport1) GetPositionInfo(InstanceID uint32) (Track uint32, Tr
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -368,10 +395,13 @@ func (client *AVTransport1) GetDeviceCapabilities(InstanceID uint32) (PlayMedia 
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -413,10 +443,13 @@ func (client *AVTransport1) GetTransportSettings(InstanceID uint32) (PlayMode st
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -450,10 +483,13 @@ func (client *AVTransport1) Stop(InstanceID uint32) (err error) {
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -484,15 +520,21 @@ func (client *AVTransport1) Play(InstanceID uint32, Speed string) (err error) {
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Speed); err != nil {
-		return
-	} else {
-		request.Speed = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Speed); err != nil {
+			return
+		} else {
+			request.Speed = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -517,10 +559,13 @@ func (client *AVTransport1) Pause(InstanceID uint32) (err error) {
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -545,10 +590,13 @@ func (client *AVTransport1) Record(InstanceID uint32) (err error) {
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -580,20 +628,29 @@ func (client *AVTransport1) Seek(InstanceID uint32, Unit string, Target string) 
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Unit); err != nil {
-		return
-	} else {
-		request.Unit = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Unit); err != nil {
+			return
+		} else {
+			request.Unit = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Target); err != nil {
-		return
-	} else {
-		request.Target = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Target); err != nil {
+			return
+		} else {
+			request.Target = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -618,10 +675,13 @@ func (client *AVTransport1) Next(InstanceID uint32) (err error) {
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -646,10 +706,13 @@ func (client *AVTransport1) Previous(InstanceID uint32) (err error) {
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -680,15 +743,21 @@ func (client *AVTransport1) SetPlayMode(InstanceID uint32, NewPlayMode string) (
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewPlayMode); err != nil {
-		return
-	} else {
-		request.NewPlayMode = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewPlayMode); err != nil {
+			return
+		} else {
+			request.NewPlayMode = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -714,15 +783,21 @@ func (client *AVTransport1) SetRecordQualityMode(InstanceID uint32, NewRecordQua
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewRecordQualityMode); err != nil {
-		return
-	} else {
-		request.NewRecordQualityMode = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewRecordQualityMode); err != nil {
+			return
+		} else {
+			request.NewRecordQualityMode = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -747,10 +822,13 @@ func (client *AVTransport1) GetCurrentTransportActions(InstanceID uint32) (Actio
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -842,20 +920,29 @@ func (client *AVTransport2) SetAVTransportURI(InstanceID uint32, CurrentURI stri
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(CurrentURI); err != nil {
-		return
-	} else {
-		request.CurrentURI = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(CurrentURI); err != nil {
+			return
+		} else {
+			request.CurrentURI = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(CurrentURIMetaData); err != nil {
-		return
-	} else {
-		request.CurrentURIMetaData = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(CurrentURIMetaData); err != nil {
+			return
+		} else {
+			request.CurrentURIMetaData = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -882,20 +969,29 @@ func (client *AVTransport2) SetNextAVTransportURI(InstanceID uint32, NextURI str
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NextURI); err != nil {
-		return
-	} else {
-		request.NextURI = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NextURI); err != nil {
+			return
+		} else {
+			request.NextURI = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NextURIMetaData); err != nil {
-		return
-	} else {
-		request.NextURIMetaData = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NextURIMetaData); err != nil {
+			return
+		} else {
+			request.NextURIMetaData = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -924,10 +1020,13 @@ func (client *AVTransport2) GetMediaInfo(InstanceID uint32) (NrTracks uint32, Me
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -995,10 +1094,13 @@ func (client *AVTransport2) GetMediaInfo_Ext(InstanceID uint32) (CurrentType str
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1072,10 +1174,13 @@ func (client *AVTransport2) GetTransportInfo(InstanceID uint32) (CurrentTranspor
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1117,10 +1222,13 @@ func (client *AVTransport2) GetPositionInfo(InstanceID uint32) (Track uint32, Tr
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1178,10 +1286,13 @@ func (client *AVTransport2) GetDeviceCapabilities(InstanceID uint32) (PlayMedia 
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1223,10 +1334,13 @@ func (client *AVTransport2) GetTransportSettings(InstanceID uint32) (PlayMode st
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1260,10 +1374,13 @@ func (client *AVTransport2) Stop(InstanceID uint32) (err error) {
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1294,15 +1411,21 @@ func (client *AVTransport2) Play(InstanceID uint32, Speed string) (err error) {
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Speed); err != nil {
-		return
-	} else {
-		request.Speed = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Speed); err != nil {
+			return
+		} else {
+			request.Speed = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1327,10 +1450,13 @@ func (client *AVTransport2) Pause(InstanceID uint32) (err error) {
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1355,10 +1481,13 @@ func (client *AVTransport2) Record(InstanceID uint32) (err error) {
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1390,20 +1519,29 @@ func (client *AVTransport2) Seek(InstanceID uint32, Unit string, Target string) 
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Unit); err != nil {
-		return
-	} else {
-		request.Unit = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Unit); err != nil {
+			return
+		} else {
+			request.Unit = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Target); err != nil {
-		return
-	} else {
-		request.Target = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Target); err != nil {
+			return
+		} else {
+			request.Target = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1428,10 +1566,13 @@ func (client *AVTransport2) Next(InstanceID uint32) (err error) {
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1456,10 +1597,13 @@ func (client *AVTransport2) Previous(InstanceID uint32) (err error) {
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1490,15 +1634,21 @@ func (client *AVTransport2) SetPlayMode(InstanceID uint32, NewPlayMode string) (
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewPlayMode); err != nil {
-		return
-	} else {
-		request.NewPlayMode = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewPlayMode); err != nil {
+			return
+		} else {
+			request.NewPlayMode = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1524,15 +1674,21 @@ func (client *AVTransport2) SetRecordQualityMode(InstanceID uint32, NewRecordQua
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewRecordQualityMode); err != nil {
-		return
-	} else {
-		request.NewRecordQualityMode = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewRecordQualityMode); err != nil {
+			return
+		} else {
+			request.NewRecordQualityMode = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1557,10 +1713,13 @@ func (client *AVTransport2) GetCurrentTransportActions(InstanceID uint32) (Actio
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1594,10 +1753,13 @@ func (client *AVTransport2) GetDRMState(InstanceID uint32) (CurrentDRMState stri
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1628,15 +1790,21 @@ func (client *AVTransport2) GetStateVariables(InstanceID uint32, StateVariableLi
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(StateVariableList); err != nil {
-		return
-	} else {
-		request.StateVariableList = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(StateVariableList); err != nil {
+			return
+		} else {
+			request.StateVariableList = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1670,30 +1838,45 @@ func (client *AVTransport2) SetStateVariables(InstanceID uint32, AVTransportUDN 
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(AVTransportUDN); err != nil {
-		return
-	} else {
-		request.AVTransportUDN = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(AVTransportUDN); err != nil {
+			return
+		} else {
+			request.AVTransportUDN = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(ServiceType); err != nil {
-		return
-	} else {
-		request.ServiceType = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ServiceType); err != nil {
+			return
+		} else {
+			request.ServiceType = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(ServiceId); err != nil {
-		return
-	} else {
-		request.ServiceId = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ServiceId); err != nil {
+			return
+		} else {
+			request.ServiceId = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(StateVariableValuePairs); err != nil {
-		return
-	} else {
-		request.StateVariableValuePairs = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(StateVariableValuePairs); err != nil {
+			return
+		} else {
+			request.StateVariableValuePairs = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1821,25 +2004,37 @@ func (client *ConnectionManager1) PrepareForConnection(RemoteProtocolInfo string
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RemoteProtocolInfo); err != nil {
-		return
-	} else {
-		request.RemoteProtocolInfo = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RemoteProtocolInfo); err != nil {
+			return
+		} else {
+			request.RemoteProtocolInfo = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(PeerConnectionManager); err != nil {
-		return
-	} else {
-		request.PeerConnectionManager = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(PeerConnectionManager); err != nil {
+			return
+		} else {
+			request.PeerConnectionManager = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalI4(PeerConnectionID); err != nil {
-		return
-	} else {
-		request.PeerConnectionID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalI4(PeerConnectionID); err != nil {
+			return
+		} else {
+			request.PeerConnectionID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Direction); err != nil {
-		return
-	} else {
-		request.Direction = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Direction); err != nil {
+			return
+		} else {
+			request.Direction = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1877,10 +2072,13 @@ func (client *ConnectionManager1) ConnectionComplete(ConnectionID int32) (err er
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalI4(ConnectionID); err != nil {
-		return
-	} else {
-		request.ConnectionID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalI4(ConnectionID); err != nil {
+			return
+		} else {
+			request.ConnectionID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1937,10 +2135,13 @@ func (client *ConnectionManager1) GetCurrentConnectionInfo(ConnectionID int32) (
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalI4(ConnectionID); err != nil {
-		return
-	} else {
-		request.ConnectionID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalI4(ConnectionID); err != nil {
+			return
+		} else {
+			request.ConnectionID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2092,25 +2293,37 @@ func (client *ConnectionManager2) PrepareForConnection(RemoteProtocolInfo string
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RemoteProtocolInfo); err != nil {
-		return
-	} else {
-		request.RemoteProtocolInfo = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RemoteProtocolInfo); err != nil {
+			return
+		} else {
+			request.RemoteProtocolInfo = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(PeerConnectionManager); err != nil {
-		return
-	} else {
-		request.PeerConnectionManager = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(PeerConnectionManager); err != nil {
+			return
+		} else {
+			request.PeerConnectionManager = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalI4(PeerConnectionID); err != nil {
-		return
-	} else {
-		request.PeerConnectionID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalI4(PeerConnectionID); err != nil {
+			return
+		} else {
+			request.PeerConnectionID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Direction); err != nil {
-		return
-	} else {
-		request.Direction = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Direction); err != nil {
+			return
+		} else {
+			request.Direction = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2148,10 +2361,13 @@ func (client *ConnectionManager2) ConnectionComplete(ConnectionID int32) (err er
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalI4(ConnectionID); err != nil {
-		return
-	} else {
-		request.ConnectionID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalI4(ConnectionID); err != nil {
+			return
+		} else {
+			request.ConnectionID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2208,10 +2424,13 @@ func (client *ConnectionManager2) GetCurrentConnectionInfo(ConnectionID int32) (
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalI4(ConnectionID); err != nil {
-		return
-	} else {
-		request.ConnectionID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalI4(ConnectionID); err != nil {
+			return
+		} else {
+			request.ConnectionID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2413,35 +2632,53 @@ func (client *ContentDirectory1) Browse(ObjectID string, BrowseFlag string, Filt
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ObjectID); err != nil {
-		return
-	} else {
-		request.ObjectID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ObjectID); err != nil {
+			return
+		} else {
+			request.ObjectID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(BrowseFlag); err != nil {
-		return
-	} else {
-		request.BrowseFlag = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(BrowseFlag); err != nil {
+			return
+		} else {
+			request.BrowseFlag = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Filter); err != nil {
-		return
-	} else {
-		request.Filter = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Filter); err != nil {
+			return
+		} else {
+			request.Filter = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(StartingIndex); err != nil {
-		return
-	} else {
-		request.StartingIndex = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(StartingIndex); err != nil {
+			return
+		} else {
+			request.StartingIndex = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(RequestedCount); err != nil {
-		return
-	} else {
-		request.RequestedCount = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(RequestedCount); err != nil {
+			return
+		} else {
+			request.RequestedCount = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(SortCriteria); err != nil {
-		return
-	} else {
-		request.SortCriteria = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(SortCriteria); err != nil {
+			return
+		} else {
+			request.SortCriteria = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2488,35 +2725,53 @@ func (client *ContentDirectory1) Search(ContainerID string, SearchCriteria strin
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ContainerID); err != nil {
-		return
-	} else {
-		request.ContainerID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ContainerID); err != nil {
+			return
+		} else {
+			request.ContainerID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(SearchCriteria); err != nil {
-		return
-	} else {
-		request.SearchCriteria = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(SearchCriteria); err != nil {
+			return
+		} else {
+			request.SearchCriteria = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Filter); err != nil {
-		return
-	} else {
-		request.Filter = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Filter); err != nil {
+			return
+		} else {
+			request.Filter = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(StartingIndex); err != nil {
-		return
-	} else {
-		request.StartingIndex = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(StartingIndex); err != nil {
+			return
+		} else {
+			request.StartingIndex = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(RequestedCount); err != nil {
-		return
-	} else {
-		request.RequestedCount = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(RequestedCount); err != nil {
+			return
+		} else {
+			request.RequestedCount = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(SortCriteria); err != nil {
-		return
-	} else {
-		request.SortCriteria = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(SortCriteria); err != nil {
+			return
+		} else {
+			request.SortCriteria = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2559,15 +2814,21 @@ func (client *ContentDirectory1) CreateObject(ContainerID string, Elements strin
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ContainerID); err != nil {
-		return
-	} else {
-		request.ContainerID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ContainerID); err != nil {
+			return
+		} else {
+			request.ContainerID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Elements); err != nil {
-		return
-	} else {
-		request.Elements = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Elements); err != nil {
+			return
+		} else {
+			request.Elements = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2601,10 +2862,13 @@ func (client *ContentDirectory1) DestroyObject(ObjectID string) (err error) {
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ObjectID); err != nil {
-		return
-	} else {
-		request.ObjectID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ObjectID); err != nil {
+			return
+		} else {
+			request.ObjectID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2631,20 +2895,29 @@ func (client *ContentDirectory1) UpdateObject(ObjectID string, CurrentTagValue s
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ObjectID); err != nil {
-		return
-	} else {
-		request.ObjectID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ObjectID); err != nil {
+			return
+		} else {
+			request.ObjectID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(CurrentTagValue); err != nil {
-		return
-	} else {
-		request.CurrentTagValue = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(CurrentTagValue); err != nil {
+			return
+		} else {
+			request.CurrentTagValue = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewTagValue); err != nil {
-		return
-	} else {
-		request.NewTagValue = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewTagValue); err != nil {
+			return
+		} else {
+			request.NewTagValue = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2670,15 +2943,21 @@ func (client *ContentDirectory1) ImportResource(SourceURI *url.URL, DestinationU
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalURI(SourceURI); err != nil {
-		return
-	} else {
-		request.SourceURI = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalURI(SourceURI); err != nil {
+			return
+		} else {
+			request.SourceURI = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalURI(DestinationURI); err != nil {
-		return
-	} else {
-		request.DestinationURI = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalURI(DestinationURI); err != nil {
+			return
+		} else {
+			request.DestinationURI = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2709,15 +2988,21 @@ func (client *ContentDirectory1) ExportResource(SourceURI *url.URL, DestinationU
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalURI(SourceURI); err != nil {
-		return
-	} else {
-		request.SourceURI = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalURI(SourceURI); err != nil {
+			return
+		} else {
+			request.SourceURI = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalURI(DestinationURI); err != nil {
-		return
-	} else {
-		request.DestinationURI = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalURI(DestinationURI); err != nil {
+			return
+		} else {
+			request.DestinationURI = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2747,10 +3032,13 @@ func (client *ContentDirectory1) StopTransferResource(TransferID uint32) (err er
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(TransferID); err != nil {
-		return
-	} else {
-		request.TransferID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(TransferID); err != nil {
+			return
+		} else {
+			request.TransferID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2779,10 +3067,13 @@ func (client *ContentDirectory1) GetTransferProgress(TransferID uint32) (Transfe
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(TransferID); err != nil {
-		return
-	} else {
-		request.TransferID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(TransferID); err != nil {
+			return
+		} else {
+			request.TransferID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2820,10 +3111,13 @@ func (client *ContentDirectory1) DeleteResource(ResourceURI *url.URL) (err error
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalURI(ResourceURI); err != nil {
-		return
-	} else {
-		request.ResourceURI = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalURI(ResourceURI); err != nil {
+			return
+		} else {
+			request.ResourceURI = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2849,15 +3143,21 @@ func (client *ContentDirectory1) CreateReference(ContainerID string, ObjectID st
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ContainerID); err != nil {
-		return
-	} else {
-		request.ContainerID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ContainerID); err != nil {
+			return
+		} else {
+			request.ContainerID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(ObjectID); err != nil {
-		return
-	} else {
-		request.ObjectID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ObjectID); err != nil {
+			return
+		} else {
+			request.ObjectID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3087,35 +3387,53 @@ func (client *ContentDirectory2) Browse(ObjectID string, BrowseFlag string, Filt
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ObjectID); err != nil {
-		return
-	} else {
-		request.ObjectID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ObjectID); err != nil {
+			return
+		} else {
+			request.ObjectID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(BrowseFlag); err != nil {
-		return
-	} else {
-		request.BrowseFlag = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(BrowseFlag); err != nil {
+			return
+		} else {
+			request.BrowseFlag = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Filter); err != nil {
-		return
-	} else {
-		request.Filter = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Filter); err != nil {
+			return
+		} else {
+			request.Filter = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(StartingIndex); err != nil {
-		return
-	} else {
-		request.StartingIndex = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(StartingIndex); err != nil {
+			return
+		} else {
+			request.StartingIndex = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(RequestedCount); err != nil {
-		return
-	} else {
-		request.RequestedCount = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(RequestedCount); err != nil {
+			return
+		} else {
+			request.RequestedCount = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(SortCriteria); err != nil {
-		return
-	} else {
-		request.SortCriteria = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(SortCriteria); err != nil {
+			return
+		} else {
+			request.SortCriteria = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3162,35 +3480,53 @@ func (client *ContentDirectory2) Search(ContainerID string, SearchCriteria strin
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ContainerID); err != nil {
-		return
-	} else {
-		request.ContainerID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ContainerID); err != nil {
+			return
+		} else {
+			request.ContainerID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(SearchCriteria); err != nil {
-		return
-	} else {
-		request.SearchCriteria = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(SearchCriteria); err != nil {
+			return
+		} else {
+			request.SearchCriteria = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Filter); err != nil {
-		return
-	} else {
-		request.Filter = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Filter); err != nil {
+			return
+		} else {
+			request.Filter = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(StartingIndex); err != nil {
-		return
-	} else {
-		request.StartingIndex = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(StartingIndex); err != nil {
+			return
+		} else {
+			request.StartingIndex = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(RequestedCount); err != nil {
-		return
-	} else {
-		request.RequestedCount = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(RequestedCount); err != nil {
+			return
+		} else {
+			request.RequestedCount = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(SortCriteria); err != nil {
-		return
-	} else {
-		request.SortCriteria = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(SortCriteria); err != nil {
+			return
+		} else {
+			request.SortCriteria = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3233,15 +3569,21 @@ func (client *ContentDirectory2) CreateObject(ContainerID string, Elements strin
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ContainerID); err != nil {
-		return
-	} else {
-		request.ContainerID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ContainerID); err != nil {
+			return
+		} else {
+			request.ContainerID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Elements); err != nil {
-		return
-	} else {
-		request.Elements = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Elements); err != nil {
+			return
+		} else {
+			request.Elements = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3275,10 +3617,13 @@ func (client *ContentDirectory2) DestroyObject(ObjectID string) (err error) {
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ObjectID); err != nil {
-		return
-	} else {
-		request.ObjectID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ObjectID); err != nil {
+			return
+		} else {
+			request.ObjectID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3305,20 +3650,29 @@ func (client *ContentDirectory2) UpdateObject(ObjectID string, CurrentTagValue s
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ObjectID); err != nil {
-		return
-	} else {
-		request.ObjectID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ObjectID); err != nil {
+			return
+		} else {
+			request.ObjectID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(CurrentTagValue); err != nil {
-		return
-	} else {
-		request.CurrentTagValue = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(CurrentTagValue); err != nil {
+			return
+		} else {
+			request.CurrentTagValue = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewTagValue); err != nil {
-		return
-	} else {
-		request.NewTagValue = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewTagValue); err != nil {
+			return
+		} else {
+			request.NewTagValue = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3344,15 +3698,21 @@ func (client *ContentDirectory2) MoveObject(ObjectID string, NewParentID string)
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ObjectID); err != nil {
-		return
-	} else {
-		request.ObjectID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ObjectID); err != nil {
+			return
+		} else {
+			request.ObjectID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewParentID); err != nil {
-		return
-	} else {
-		request.NewParentID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewParentID); err != nil {
+			return
+		} else {
+			request.NewParentID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3383,15 +3743,21 @@ func (client *ContentDirectory2) ImportResource(SourceURI *url.URL, DestinationU
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalURI(SourceURI); err != nil {
-		return
-	} else {
-		request.SourceURI = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalURI(SourceURI); err != nil {
+			return
+		} else {
+			request.SourceURI = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalURI(DestinationURI); err != nil {
-		return
-	} else {
-		request.DestinationURI = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalURI(DestinationURI); err != nil {
+			return
+		} else {
+			request.DestinationURI = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3422,15 +3788,21 @@ func (client *ContentDirectory2) ExportResource(SourceURI *url.URL, DestinationU
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalURI(SourceURI); err != nil {
-		return
-	} else {
-		request.SourceURI = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalURI(SourceURI); err != nil {
+			return
+		} else {
+			request.SourceURI = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalURI(DestinationURI); err != nil {
-		return
-	} else {
-		request.DestinationURI = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalURI(DestinationURI); err != nil {
+			return
+		} else {
+			request.DestinationURI = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3460,10 +3832,13 @@ func (client *ContentDirectory2) DeleteResource(ResourceURI *url.URL) (err error
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalURI(ResourceURI); err != nil {
-		return
-	} else {
-		request.ResourceURI = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalURI(ResourceURI); err != nil {
+			return
+		} else {
+			request.ResourceURI = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3488,10 +3863,13 @@ func (client *ContentDirectory2) StopTransferResource(TransferID uint32) (err er
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(TransferID); err != nil {
-		return
-	} else {
-		request.TransferID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(TransferID); err != nil {
+			return
+		} else {
+			request.TransferID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3520,10 +3898,13 @@ func (client *ContentDirectory2) GetTransferProgress(TransferID uint32) (Transfe
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(TransferID); err != nil {
-		return
-	} else {
-		request.TransferID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(TransferID); err != nil {
+			return
+		} else {
+			request.TransferID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3562,15 +3943,21 @@ func (client *ContentDirectory2) CreateReference(ContainerID string, ObjectID st
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ContainerID); err != nil {
-		return
-	} else {
-		request.ContainerID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ContainerID); err != nil {
+			return
+		} else {
+			request.ContainerID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(ObjectID); err != nil {
-		return
-	} else {
-		request.ObjectID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ObjectID); err != nil {
+			return
+		} else {
+			request.ObjectID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3826,35 +4213,53 @@ func (client *ContentDirectory3) Browse(ObjectID string, BrowseFlag string, Filt
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ObjectID); err != nil {
-		return
-	} else {
-		request.ObjectID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ObjectID); err != nil {
+			return
+		} else {
+			request.ObjectID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(BrowseFlag); err != nil {
-		return
-	} else {
-		request.BrowseFlag = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(BrowseFlag); err != nil {
+			return
+		} else {
+			request.BrowseFlag = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Filter); err != nil {
-		return
-	} else {
-		request.Filter = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Filter); err != nil {
+			return
+		} else {
+			request.Filter = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(StartingIndex); err != nil {
-		return
-	} else {
-		request.StartingIndex = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(StartingIndex); err != nil {
+			return
+		} else {
+			request.StartingIndex = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(RequestedCount); err != nil {
-		return
-	} else {
-		request.RequestedCount = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(RequestedCount); err != nil {
+			return
+		} else {
+			request.RequestedCount = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(SortCriteria); err != nil {
-		return
-	} else {
-		request.SortCriteria = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(SortCriteria); err != nil {
+			return
+		} else {
+			request.SortCriteria = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3901,35 +4306,53 @@ func (client *ContentDirectory3) Search(ContainerID string, SearchCriteria strin
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ContainerID); err != nil {
-		return
-	} else {
-		request.ContainerID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ContainerID); err != nil {
+			return
+		} else {
+			request.ContainerID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(SearchCriteria); err != nil {
-		return
-	} else {
-		request.SearchCriteria = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(SearchCriteria); err != nil {
+			return
+		} else {
+			request.SearchCriteria = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Filter); err != nil {
-		return
-	} else {
-		request.Filter = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Filter); err != nil {
+			return
+		} else {
+			request.Filter = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(StartingIndex); err != nil {
-		return
-	} else {
-		request.StartingIndex = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(StartingIndex); err != nil {
+			return
+		} else {
+			request.StartingIndex = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(RequestedCount); err != nil {
-		return
-	} else {
-		request.RequestedCount = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(RequestedCount); err != nil {
+			return
+		} else {
+			request.RequestedCount = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(SortCriteria); err != nil {
-		return
-	} else {
-		request.SortCriteria = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(SortCriteria); err != nil {
+			return
+		} else {
+			request.SortCriteria = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3972,15 +4395,21 @@ func (client *ContentDirectory3) CreateObject(ContainerID string, Elements strin
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ContainerID); err != nil {
-		return
-	} else {
-		request.ContainerID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ContainerID); err != nil {
+			return
+		} else {
+			request.ContainerID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Elements); err != nil {
-		return
-	} else {
-		request.Elements = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Elements); err != nil {
+			return
+		} else {
+			request.Elements = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4014,10 +4443,13 @@ func (client *ContentDirectory3) DestroyObject(ObjectID string) (err error) {
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ObjectID); err != nil {
-		return
-	} else {
-		request.ObjectID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ObjectID); err != nil {
+			return
+		} else {
+			request.ObjectID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4044,20 +4476,29 @@ func (client *ContentDirectory3) UpdateObject(ObjectID string, CurrentTagValue s
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ObjectID); err != nil {
-		return
-	} else {
-		request.ObjectID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ObjectID); err != nil {
+			return
+		} else {
+			request.ObjectID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(CurrentTagValue); err != nil {
-		return
-	} else {
-		request.CurrentTagValue = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(CurrentTagValue); err != nil {
+			return
+		} else {
+			request.CurrentTagValue = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewTagValue); err != nil {
-		return
-	} else {
-		request.NewTagValue = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewTagValue); err != nil {
+			return
+		} else {
+			request.NewTagValue = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4083,15 +4524,21 @@ func (client *ContentDirectory3) MoveObject(ObjectID string, NewParentID string)
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ObjectID); err != nil {
-		return
-	} else {
-		request.ObjectID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ObjectID); err != nil {
+			return
+		} else {
+			request.ObjectID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewParentID); err != nil {
-		return
-	} else {
-		request.NewParentID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewParentID); err != nil {
+			return
+		} else {
+			request.NewParentID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4122,15 +4569,21 @@ func (client *ContentDirectory3) ImportResource(SourceURI *url.URL, DestinationU
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalURI(SourceURI); err != nil {
-		return
-	} else {
-		request.SourceURI = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalURI(SourceURI); err != nil {
+			return
+		} else {
+			request.SourceURI = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalURI(DestinationURI); err != nil {
-		return
-	} else {
-		request.DestinationURI = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalURI(DestinationURI); err != nil {
+			return
+		} else {
+			request.DestinationURI = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4161,15 +4614,21 @@ func (client *ContentDirectory3) ExportResource(SourceURI *url.URL, DestinationU
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalURI(SourceURI); err != nil {
-		return
-	} else {
-		request.SourceURI = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalURI(SourceURI); err != nil {
+			return
+		} else {
+			request.SourceURI = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalURI(DestinationURI); err != nil {
-		return
-	} else {
-		request.DestinationURI = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalURI(DestinationURI); err != nil {
+			return
+		} else {
+			request.DestinationURI = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4199,10 +4658,13 @@ func (client *ContentDirectory3) DeleteResource(ResourceURI *url.URL) (err error
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalURI(ResourceURI); err != nil {
-		return
-	} else {
-		request.ResourceURI = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalURI(ResourceURI); err != nil {
+			return
+		} else {
+			request.ResourceURI = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4227,10 +4689,13 @@ func (client *ContentDirectory3) StopTransferResource(TransferID uint32) (err er
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(TransferID); err != nil {
-		return
-	} else {
-		request.TransferID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(TransferID); err != nil {
+			return
+		} else {
+			request.TransferID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4259,10 +4724,13 @@ func (client *ContentDirectory3) GetTransferProgress(TransferID uint32) (Transfe
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(TransferID); err != nil {
-		return
-	} else {
-		request.TransferID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(TransferID); err != nil {
+			return
+		} else {
+			request.TransferID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4301,15 +4769,21 @@ func (client *ContentDirectory3) CreateReference(ContainerID string, ObjectID st
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ContainerID); err != nil {
-		return
-	} else {
-		request.ContainerID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ContainerID); err != nil {
+			return
+		} else {
+			request.ContainerID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(ObjectID); err != nil {
-		return
-	} else {
-		request.ObjectID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ObjectID); err != nil {
+			return
+		} else {
+			request.ObjectID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4341,20 +4815,29 @@ func (client *ContentDirectory3) FreeFormQuery(ContainerID string, CDSView uint3
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ContainerID); err != nil {
-		return
-	} else {
-		request.ContainerID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ContainerID); err != nil {
+			return
+		} else {
+			request.ContainerID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(CDSView); err != nil {
-		return
-	} else {
-		request.CDSView = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(CDSView); err != nil {
+			return
+		} else {
+			request.CDSView = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(QueryRequest); err != nil {
-		return
-	} else {
-		request.QueryRequest = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(QueryRequest); err != nil {
+			return
+		} else {
+			request.QueryRequest = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4474,10 +4957,13 @@ func (client *RenderingControl1) ListPresets(InstanceID uint32) (CurrentPresetNa
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4513,15 +4999,21 @@ func (client *RenderingControl1) SelectPreset(InstanceID uint32, PresetName stri
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(PresetName); err != nil {
-		return
-	} else {
-		request.PresetName = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(PresetName); err != nil {
+			return
+		} else {
+			request.PresetName = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4550,10 +5042,13 @@ func (client *RenderingControl1) GetBrightness(InstanceID uint32) (CurrentBright
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4589,15 +5084,21 @@ func (client *RenderingControl1) SetBrightness(InstanceID uint32, DesiredBrightn
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(DesiredBrightness); err != nil {
-		return
-	} else {
-		request.DesiredBrightness = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(DesiredBrightness); err != nil {
+			return
+		} else {
+			request.DesiredBrightness = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4626,10 +5127,13 @@ func (client *RenderingControl1) GetContrast(InstanceID uint32) (CurrentContrast
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4665,15 +5169,21 @@ func (client *RenderingControl1) SetContrast(InstanceID uint32, DesiredContrast 
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(DesiredContrast); err != nil {
-		return
-	} else {
-		request.DesiredContrast = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(DesiredContrast); err != nil {
+			return
+		} else {
+			request.DesiredContrast = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4702,10 +5212,13 @@ func (client *RenderingControl1) GetSharpness(InstanceID uint32) (CurrentSharpne
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4741,15 +5254,21 @@ func (client *RenderingControl1) SetSharpness(InstanceID uint32, DesiredSharpnes
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(DesiredSharpness); err != nil {
-		return
-	} else {
-		request.DesiredSharpness = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(DesiredSharpness); err != nil {
+			return
+		} else {
+			request.DesiredSharpness = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4774,10 +5293,13 @@ func (client *RenderingControl1) GetRedVideoGain(InstanceID uint32) (CurrentRedV
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4808,15 +5330,21 @@ func (client *RenderingControl1) SetRedVideoGain(InstanceID uint32, DesiredRedVi
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(DesiredRedVideoGain); err != nil {
-		return
-	} else {
-		request.DesiredRedVideoGain = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(DesiredRedVideoGain); err != nil {
+			return
+		} else {
+			request.DesiredRedVideoGain = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4845,10 +5373,13 @@ func (client *RenderingControl1) GetGreenVideoGain(InstanceID uint32) (CurrentGr
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4884,15 +5415,21 @@ func (client *RenderingControl1) SetGreenVideoGain(InstanceID uint32, DesiredGre
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(DesiredGreenVideoGain); err != nil {
-		return
-	} else {
-		request.DesiredGreenVideoGain = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(DesiredGreenVideoGain); err != nil {
+			return
+		} else {
+			request.DesiredGreenVideoGain = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4921,10 +5458,13 @@ func (client *RenderingControl1) GetBlueVideoGain(InstanceID uint32) (CurrentBlu
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4960,15 +5500,21 @@ func (client *RenderingControl1) SetBlueVideoGain(InstanceID uint32, DesiredBlue
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(DesiredBlueVideoGain); err != nil {
-		return
-	} else {
-		request.DesiredBlueVideoGain = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(DesiredBlueVideoGain); err != nil {
+			return
+		} else {
+			request.DesiredBlueVideoGain = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4997,10 +5543,13 @@ func (client *RenderingControl1) GetRedVideoBlackLevel(InstanceID uint32) (Curre
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5036,15 +5585,21 @@ func (client *RenderingControl1) SetRedVideoBlackLevel(InstanceID uint32, Desire
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(DesiredRedVideoBlackLevel); err != nil {
-		return
-	} else {
-		request.DesiredRedVideoBlackLevel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(DesiredRedVideoBlackLevel); err != nil {
+			return
+		} else {
+			request.DesiredRedVideoBlackLevel = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5073,10 +5628,13 @@ func (client *RenderingControl1) GetGreenVideoBlackLevel(InstanceID uint32) (Cur
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5112,15 +5670,21 @@ func (client *RenderingControl1) SetGreenVideoBlackLevel(InstanceID uint32, Desi
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(DesiredGreenVideoBlackLevel); err != nil {
-		return
-	} else {
-		request.DesiredGreenVideoBlackLevel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(DesiredGreenVideoBlackLevel); err != nil {
+			return
+		} else {
+			request.DesiredGreenVideoBlackLevel = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5149,10 +5713,13 @@ func (client *RenderingControl1) GetBlueVideoBlackLevel(InstanceID uint32) (Curr
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5188,15 +5755,21 @@ func (client *RenderingControl1) SetBlueVideoBlackLevel(InstanceID uint32, Desir
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(DesiredBlueVideoBlackLevel); err != nil {
-		return
-	} else {
-		request.DesiredBlueVideoBlackLevel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(DesiredBlueVideoBlackLevel); err != nil {
+			return
+		} else {
+			request.DesiredBlueVideoBlackLevel = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5225,10 +5798,13 @@ func (client *RenderingControl1) GetColorTemperature(InstanceID uint32) (Current
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5264,15 +5840,21 @@ func (client *RenderingControl1) SetColorTemperature(InstanceID uint32, DesiredC
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(DesiredColorTemperature); err != nil {
-		return
-	} else {
-		request.DesiredColorTemperature = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(DesiredColorTemperature); err != nil {
+			return
+		} else {
+			request.DesiredColorTemperature = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5301,10 +5883,13 @@ func (client *RenderingControl1) GetHorizontalKeystone(InstanceID uint32) (Curre
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5340,15 +5925,21 @@ func (client *RenderingControl1) SetHorizontalKeystone(InstanceID uint32, Desire
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalI2(DesiredHorizontalKeystone); err != nil {
-		return
-	} else {
-		request.DesiredHorizontalKeystone = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalI2(DesiredHorizontalKeystone); err != nil {
+			return
+		} else {
+			request.DesiredHorizontalKeystone = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5377,10 +5968,13 @@ func (client *RenderingControl1) GetVerticalKeystone(InstanceID uint32) (Current
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5416,15 +6010,21 @@ func (client *RenderingControl1) SetVerticalKeystone(InstanceID uint32, DesiredV
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalI2(DesiredVerticalKeystone); err != nil {
-		return
-	} else {
-		request.DesiredVerticalKeystone = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalI2(DesiredVerticalKeystone); err != nil {
+			return
+		} else {
+			request.DesiredVerticalKeystone = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5455,15 +6055,21 @@ func (client *RenderingControl1) GetMute(InstanceID uint32, Channel string) (Cur
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Channel); err != nil {
-		return
-	} else {
-		request.Channel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Channel); err != nil {
+			return
+		} else {
+			request.Channel = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5500,20 +6106,29 @@ func (client *RenderingControl1) SetMute(InstanceID uint32, Channel string, Desi
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Channel); err != nil {
-		return
-	} else {
-		request.Channel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Channel); err != nil {
+			return
+		} else {
+			request.Channel = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalBoolean(DesiredMute); err != nil {
-		return
-	} else {
-		request.DesiredMute = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalBoolean(DesiredMute); err != nil {
+			return
+		} else {
+			request.DesiredMute = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5548,15 +6163,21 @@ func (client *RenderingControl1) GetVolume(InstanceID uint32, Channel string) (C
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Channel); err != nil {
-		return
-	} else {
-		request.Channel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Channel); err != nil {
+			return
+		} else {
+			request.Channel = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5595,20 +6216,29 @@ func (client *RenderingControl1) SetVolume(InstanceID uint32, Channel string, De
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Channel); err != nil {
-		return
-	} else {
-		request.Channel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Channel); err != nil {
+			return
+		} else {
+			request.Channel = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(DesiredVolume); err != nil {
-		return
-	} else {
-		request.DesiredVolume = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(DesiredVolume); err != nil {
+			return
+		} else {
+			request.DesiredVolume = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5639,15 +6269,21 @@ func (client *RenderingControl1) GetVolumeDB(InstanceID uint32, Channel string) 
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Channel); err != nil {
-		return
-	} else {
-		request.Channel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Channel); err != nil {
+			return
+		} else {
+			request.Channel = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5684,20 +6320,29 @@ func (client *RenderingControl1) SetVolumeDB(InstanceID uint32, Channel string, 
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Channel); err != nil {
-		return
-	} else {
-		request.Channel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Channel); err != nil {
+			return
+		} else {
+			request.Channel = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalI2(DesiredVolume); err != nil {
-		return
-	} else {
-		request.DesiredVolume = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalI2(DesiredVolume); err != nil {
+			return
+		} else {
+			request.DesiredVolume = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5728,15 +6373,21 @@ func (client *RenderingControl1) GetVolumeDBRange(InstanceID uint32, Channel str
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Channel); err != nil {
-		return
-	} else {
-		request.Channel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Channel); err != nil {
+			return
+		} else {
+			request.Channel = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5776,15 +6427,21 @@ func (client *RenderingControl1) GetLoudness(InstanceID uint32, Channel string) 
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Channel); err != nil {
-		return
-	} else {
-		request.Channel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Channel); err != nil {
+			return
+		} else {
+			request.Channel = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5821,20 +6478,29 @@ func (client *RenderingControl1) SetLoudness(InstanceID uint32, Channel string, 
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Channel); err != nil {
-		return
-	} else {
-		request.Channel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Channel); err != nil {
+			return
+		} else {
+			request.Channel = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalBoolean(DesiredLoudness); err != nil {
-		return
-	} else {
-		request.DesiredLoudness = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalBoolean(DesiredLoudness); err != nil {
+			return
+		} else {
+			request.DesiredLoudness = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5919,10 +6585,13 @@ func (client *RenderingControl2) ListPresets(InstanceID uint32) (CurrentPresetNa
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5958,15 +6627,21 @@ func (client *RenderingControl2) SelectPreset(InstanceID uint32, PresetName stri
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(PresetName); err != nil {
-		return
-	} else {
-		request.PresetName = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(PresetName); err != nil {
+			return
+		} else {
+			request.PresetName = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5995,10 +6670,13 @@ func (client *RenderingControl2) GetBrightness(InstanceID uint32) (CurrentBright
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6034,15 +6712,21 @@ func (client *RenderingControl2) SetBrightness(InstanceID uint32, DesiredBrightn
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(DesiredBrightness); err != nil {
-		return
-	} else {
-		request.DesiredBrightness = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(DesiredBrightness); err != nil {
+			return
+		} else {
+			request.DesiredBrightness = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6071,10 +6755,13 @@ func (client *RenderingControl2) GetContrast(InstanceID uint32) (CurrentContrast
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6110,15 +6797,21 @@ func (client *RenderingControl2) SetContrast(InstanceID uint32, DesiredContrast 
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(DesiredContrast); err != nil {
-		return
-	} else {
-		request.DesiredContrast = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(DesiredContrast); err != nil {
+			return
+		} else {
+			request.DesiredContrast = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6147,10 +6840,13 @@ func (client *RenderingControl2) GetSharpness(InstanceID uint32) (CurrentSharpne
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6186,15 +6882,21 @@ func (client *RenderingControl2) SetSharpness(InstanceID uint32, DesiredSharpnes
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(DesiredSharpness); err != nil {
-		return
-	} else {
-		request.DesiredSharpness = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(DesiredSharpness); err != nil {
+			return
+		} else {
+			request.DesiredSharpness = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6223,10 +6925,13 @@ func (client *RenderingControl2) GetRedVideoGain(InstanceID uint32) (CurrentRedV
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6262,15 +6967,21 @@ func (client *RenderingControl2) SetRedVideoGain(InstanceID uint32, DesiredRedVi
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(DesiredRedVideoGain); err != nil {
-		return
-	} else {
-		request.DesiredRedVideoGain = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(DesiredRedVideoGain); err != nil {
+			return
+		} else {
+			request.DesiredRedVideoGain = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6299,10 +7010,13 @@ func (client *RenderingControl2) GetGreenVideoGain(InstanceID uint32) (CurrentGr
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6338,15 +7052,21 @@ func (client *RenderingControl2) SetGreenVideoGain(InstanceID uint32, DesiredGre
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(DesiredGreenVideoGain); err != nil {
-		return
-	} else {
-		request.DesiredGreenVideoGain = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(DesiredGreenVideoGain); err != nil {
+			return
+		} else {
+			request.DesiredGreenVideoGain = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6375,10 +7095,13 @@ func (client *RenderingControl2) GetBlueVideoGain(InstanceID uint32) (CurrentBlu
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6414,15 +7137,21 @@ func (client *RenderingControl2) SetBlueVideoGain(InstanceID uint32, DesiredBlue
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(DesiredBlueVideoGain); err != nil {
-		return
-	} else {
-		request.DesiredBlueVideoGain = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(DesiredBlueVideoGain); err != nil {
+			return
+		} else {
+			request.DesiredBlueVideoGain = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6451,10 +7180,13 @@ func (client *RenderingControl2) GetRedVideoBlackLevel(InstanceID uint32) (Curre
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6490,15 +7222,21 @@ func (client *RenderingControl2) SetRedVideoBlackLevel(InstanceID uint32, Desire
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(DesiredRedVideoBlackLevel); err != nil {
-		return
-	} else {
-		request.DesiredRedVideoBlackLevel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(DesiredRedVideoBlackLevel); err != nil {
+			return
+		} else {
+			request.DesiredRedVideoBlackLevel = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6527,10 +7265,13 @@ func (client *RenderingControl2) GetGreenVideoBlackLevel(InstanceID uint32) (Cur
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6566,15 +7307,21 @@ func (client *RenderingControl2) SetGreenVideoBlackLevel(InstanceID uint32, Desi
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(DesiredGreenVideoBlackLevel); err != nil {
-		return
-	} else {
-		request.DesiredGreenVideoBlackLevel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(DesiredGreenVideoBlackLevel); err != nil {
+			return
+		} else {
+			request.DesiredGreenVideoBlackLevel = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6603,10 +7350,13 @@ func (client *RenderingControl2) GetBlueVideoBlackLevel(InstanceID uint32) (Curr
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6642,15 +7392,21 @@ func (client *RenderingControl2) SetBlueVideoBlackLevel(InstanceID uint32, Desir
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(DesiredBlueVideoBlackLevel); err != nil {
-		return
-	} else {
-		request.DesiredBlueVideoBlackLevel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(DesiredBlueVideoBlackLevel); err != nil {
+			return
+		} else {
+			request.DesiredBlueVideoBlackLevel = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6679,10 +7435,13 @@ func (client *RenderingControl2) GetColorTemperature(InstanceID uint32) (Current
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6718,15 +7477,21 @@ func (client *RenderingControl2) SetColorTemperature(InstanceID uint32, DesiredC
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(DesiredColorTemperature); err != nil {
-		return
-	} else {
-		request.DesiredColorTemperature = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(DesiredColorTemperature); err != nil {
+			return
+		} else {
+			request.DesiredColorTemperature = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6755,10 +7520,13 @@ func (client *RenderingControl2) GetHorizontalKeystone(InstanceID uint32) (Curre
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6794,15 +7562,21 @@ func (client *RenderingControl2) SetHorizontalKeystone(InstanceID uint32, Desire
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalI2(DesiredHorizontalKeystone); err != nil {
-		return
-	} else {
-		request.DesiredHorizontalKeystone = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalI2(DesiredHorizontalKeystone); err != nil {
+			return
+		} else {
+			request.DesiredHorizontalKeystone = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6831,10 +7605,13 @@ func (client *RenderingControl2) GetVerticalKeystone(InstanceID uint32) (Current
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6870,15 +7647,21 @@ func (client *RenderingControl2) SetVerticalKeystone(InstanceID uint32, DesiredV
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalI2(DesiredVerticalKeystone); err != nil {
-		return
-	} else {
-		request.DesiredVerticalKeystone = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalI2(DesiredVerticalKeystone); err != nil {
+			return
+		} else {
+			request.DesiredVerticalKeystone = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6909,15 +7692,21 @@ func (client *RenderingControl2) GetMute(InstanceID uint32, Channel string) (Cur
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Channel); err != nil {
-		return
-	} else {
-		request.Channel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Channel); err != nil {
+			return
+		} else {
+			request.Channel = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -6954,20 +7743,29 @@ func (client *RenderingControl2) SetMute(InstanceID uint32, Channel string, Desi
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Channel); err != nil {
-		return
-	} else {
-		request.Channel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Channel); err != nil {
+			return
+		} else {
+			request.Channel = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalBoolean(DesiredMute); err != nil {
-		return
-	} else {
-		request.DesiredMute = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalBoolean(DesiredMute); err != nil {
+			return
+		} else {
+			request.DesiredMute = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -7002,15 +7800,21 @@ func (client *RenderingControl2) GetVolume(InstanceID uint32, Channel string) (C
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Channel); err != nil {
-		return
-	} else {
-		request.Channel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Channel); err != nil {
+			return
+		} else {
+			request.Channel = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -7049,20 +7853,29 @@ func (client *RenderingControl2) SetVolume(InstanceID uint32, Channel string, De
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Channel); err != nil {
-		return
-	} else {
-		request.Channel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Channel); err != nil {
+			return
+		} else {
+			request.Channel = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(DesiredVolume); err != nil {
-		return
-	} else {
-		request.DesiredVolume = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(DesiredVolume); err != nil {
+			return
+		} else {
+			request.DesiredVolume = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -7093,15 +7906,21 @@ func (client *RenderingControl2) GetVolumeDB(InstanceID uint32, Channel string) 
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Channel); err != nil {
-		return
-	} else {
-		request.Channel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Channel); err != nil {
+			return
+		} else {
+			request.Channel = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -7138,20 +7957,29 @@ func (client *RenderingControl2) SetVolumeDB(InstanceID uint32, Channel string, 
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Channel); err != nil {
-		return
-	} else {
-		request.Channel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Channel); err != nil {
+			return
+		} else {
+			request.Channel = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalI2(DesiredVolume); err != nil {
-		return
-	} else {
-		request.DesiredVolume = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalI2(DesiredVolume); err != nil {
+			return
+		} else {
+			request.DesiredVolume = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -7182,15 +8010,21 @@ func (client *RenderingControl2) GetVolumeDBRange(InstanceID uint32, Channel str
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Channel); err != nil {
-		return
-	} else {
-		request.Channel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Channel); err != nil {
+			return
+		} else {
+			request.Channel = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -7230,15 +8064,21 @@ func (client *RenderingControl2) GetLoudness(InstanceID uint32, Channel string) 
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Channel); err != nil {
-		return
-	} else {
-		request.Channel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Channel); err != nil {
+			return
+		} else {
+			request.Channel = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -7275,20 +8115,29 @@ func (client *RenderingControl2) SetLoudness(InstanceID uint32, Channel string, 
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Channel); err != nil {
-		return
-	} else {
-		request.Channel = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Channel); err != nil {
+			return
+		} else {
+			request.Channel = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalBoolean(DesiredLoudness); err != nil {
-		return
-	} else {
-		request.DesiredLoudness = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalBoolean(DesiredLoudness); err != nil {
+			return
+		} else {
+			request.DesiredLoudness = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -7314,15 +8163,21 @@ func (client *RenderingControl2) GetStateVariables(InstanceID uint32, StateVaria
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(StateVariableList); err != nil {
-		return
-	} else {
-		request.StateVariableList = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(StateVariableList); err != nil {
+			return
+		} else {
+			request.StateVariableList = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -7356,30 +8211,45 @@ func (client *RenderingControl2) SetStateVariables(InstanceID uint32, RenderingC
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(InstanceID); err != nil {
-		return
-	} else {
-		request.InstanceID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(InstanceID); err != nil {
+			return
+		} else {
+			request.InstanceID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(RenderingControlUDN); err != nil {
-		return
-	} else {
-		request.RenderingControlUDN = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RenderingControlUDN); err != nil {
+			return
+		} else {
+			request.RenderingControlUDN = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(ServiceType); err != nil {
-		return
-	} else {
-		request.ServiceType = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ServiceType); err != nil {
+			return
+		} else {
+			request.ServiceType = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(ServiceId); err != nil {
-		return
-	} else {
-		request.ServiceId = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ServiceId); err != nil {
+			return
+		} else {
+			request.ServiceId = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(StateVariableValuePairs); err != nil {
-		return
-	} else {
-		request.StateVariableValuePairs = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(StateVariableValuePairs); err != nil {
+			return
+		} else {
+			request.StateVariableValuePairs = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -7504,10 +8374,13 @@ func (client *ScheduledRecording1) GetPropertyList(DataTypeID string) (PropertyL
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(DataTypeID); err != nil {
-		return
-	} else {
-		request.DataTypeID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(DataTypeID); err != nil {
+			return
+		} else {
+			request.DataTypeID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -7543,15 +8416,21 @@ func (client *ScheduledRecording1) GetAllowedValues(DataTypeID string, Filter st
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(DataTypeID); err != nil {
-		return
-	} else {
-		request.DataTypeID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(DataTypeID); err != nil {
+			return
+		} else {
+			request.DataTypeID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Filter); err != nil {
-		return
-	} else {
-		request.Filter = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Filter); err != nil {
+			return
+		} else {
+			request.Filter = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -7610,25 +8489,37 @@ func (client *ScheduledRecording1) BrowseRecordSchedules(Filter string, Starting
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(Filter); err != nil {
-		return
-	} else {
-		request.Filter = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Filter); err != nil {
+			return
+		} else {
+			request.Filter = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(StartingIndex); err != nil {
-		return
-	} else {
-		request.StartingIndex = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(StartingIndex); err != nil {
+			return
+		} else {
+			request.StartingIndex = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(RequestedCount); err != nil {
-		return
-	} else {
-		request.RequestedCount = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(RequestedCount); err != nil {
+			return
+		} else {
+			request.RequestedCount = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(SortCriteria); err != nil {
-		return
-	} else {
-		request.SortCriteria = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(SortCriteria); err != nil {
+			return
+		} else {
+			request.SortCriteria = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -7674,30 +8565,45 @@ func (client *ScheduledRecording1) BrowseRecordTasks(RecordScheduleID string, Fi
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordScheduleID); err != nil {
-		return
-	} else {
-		request.RecordScheduleID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordScheduleID); err != nil {
+			return
+		} else {
+			request.RecordScheduleID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Filter); err != nil {
-		return
-	} else {
-		request.Filter = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Filter); err != nil {
+			return
+		} else {
+			request.Filter = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(StartingIndex); err != nil {
-		return
-	} else {
-		request.StartingIndex = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(StartingIndex); err != nil {
+			return
+		} else {
+			request.StartingIndex = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(RequestedCount); err != nil {
-		return
-	} else {
-		request.RequestedCount = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(RequestedCount); err != nil {
+			return
+		} else {
+			request.RequestedCount = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(SortCriteria); err != nil {
-		return
-	} else {
-		request.SortCriteria = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(SortCriteria); err != nil {
+			return
+		} else {
+			request.SortCriteria = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -7739,10 +8645,13 @@ func (client *ScheduledRecording1) CreateRecordSchedule(Elements string) (Record
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(Elements); err != nil {
-		return
-	} else {
-		request.Elements = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Elements); err != nil {
+			return
+		} else {
+			request.Elements = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -7780,10 +8689,13 @@ func (client *ScheduledRecording1) DeleteRecordSchedule(RecordScheduleID string)
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordScheduleID); err != nil {
-		return
-	} else {
-		request.RecordScheduleID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordScheduleID); err != nil {
+			return
+		} else {
+			request.RecordScheduleID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -7809,15 +8721,21 @@ func (client *ScheduledRecording1) GetRecordSchedule(RecordScheduleID string, Fi
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordScheduleID); err != nil {
-		return
-	} else {
-		request.RecordScheduleID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordScheduleID); err != nil {
+			return
+		} else {
+			request.RecordScheduleID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Filter); err != nil {
-		return
-	} else {
-		request.Filter = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Filter); err != nil {
+			return
+		} else {
+			request.Filter = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -7851,10 +8769,13 @@ func (client *ScheduledRecording1) EnableRecordSchedule(RecordScheduleID string)
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordScheduleID); err != nil {
-		return
-	} else {
-		request.RecordScheduleID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordScheduleID); err != nil {
+			return
+		} else {
+			request.RecordScheduleID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -7879,10 +8800,13 @@ func (client *ScheduledRecording1) DisableRecordSchedule(RecordScheduleID string
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordScheduleID); err != nil {
-		return
-	} else {
-		request.RecordScheduleID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordScheduleID); err != nil {
+			return
+		} else {
+			request.RecordScheduleID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -7907,10 +8831,13 @@ func (client *ScheduledRecording1) DeleteRecordTask(RecordTaskID string) (err er
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordTaskID); err != nil {
-		return
-	} else {
-		request.RecordTaskID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordTaskID); err != nil {
+			return
+		} else {
+			request.RecordTaskID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -7936,15 +8863,21 @@ func (client *ScheduledRecording1) GetRecordTask(RecordTaskID string, Filter str
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordTaskID); err != nil {
-		return
-	} else {
-		request.RecordTaskID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordTaskID); err != nil {
+			return
+		} else {
+			request.RecordTaskID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Filter); err != nil {
-		return
-	} else {
-		request.Filter = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Filter); err != nil {
+			return
+		} else {
+			request.Filter = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -7978,10 +8911,13 @@ func (client *ScheduledRecording1) EnableRecordTask(RecordTaskID string) (err er
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordTaskID); err != nil {
-		return
-	} else {
-		request.RecordTaskID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordTaskID); err != nil {
+			return
+		} else {
+			request.RecordTaskID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -8006,10 +8942,13 @@ func (client *ScheduledRecording1) DisableRecordTask(RecordTaskID string) (err e
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordTaskID); err != nil {
-		return
-	} else {
-		request.RecordTaskID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordTaskID); err != nil {
+			return
+		} else {
+			request.RecordTaskID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -8034,10 +8973,13 @@ func (client *ScheduledRecording1) ResetRecordTask(RecordTaskID string) (err err
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordTaskID); err != nil {
-		return
-	} else {
-		request.RecordTaskID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordTaskID); err != nil {
+			return
+		} else {
+			request.RecordTaskID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -8062,10 +9004,13 @@ func (client *ScheduledRecording1) GetRecordScheduleConflicts(RecordScheduleID s
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordScheduleID); err != nil {
-		return
-	} else {
-		request.RecordScheduleID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordScheduleID); err != nil {
+			return
+		} else {
+			request.RecordScheduleID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -8099,10 +9044,13 @@ func (client *ScheduledRecording1) GetRecordTaskConflicts(RecordTaskID string) (
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordTaskID); err != nil {
-		return
-	} else {
-		request.RecordTaskID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordTaskID); err != nil {
+			return
+		} else {
+			request.RecordTaskID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -8231,10 +9179,13 @@ func (client *ScheduledRecording2) GetPropertyList(DataTypeID string) (PropertyL
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(DataTypeID); err != nil {
-		return
-	} else {
-		request.DataTypeID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(DataTypeID); err != nil {
+			return
+		} else {
+			request.DataTypeID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -8270,15 +9221,21 @@ func (client *ScheduledRecording2) GetAllowedValues(DataTypeID string, Filter st
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(DataTypeID); err != nil {
-		return
-	} else {
-		request.DataTypeID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(DataTypeID); err != nil {
+			return
+		} else {
+			request.DataTypeID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Filter); err != nil {
-		return
-	} else {
-		request.Filter = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Filter); err != nil {
+			return
+		} else {
+			request.Filter = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -8337,25 +9294,37 @@ func (client *ScheduledRecording2) BrowseRecordSchedules(Filter string, Starting
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(Filter); err != nil {
-		return
-	} else {
-		request.Filter = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Filter); err != nil {
+			return
+		} else {
+			request.Filter = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(StartingIndex); err != nil {
-		return
-	} else {
-		request.StartingIndex = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(StartingIndex); err != nil {
+			return
+		} else {
+			request.StartingIndex = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(RequestedCount); err != nil {
-		return
-	} else {
-		request.RequestedCount = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(RequestedCount); err != nil {
+			return
+		} else {
+			request.RequestedCount = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(SortCriteria); err != nil {
-		return
-	} else {
-		request.SortCriteria = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(SortCriteria); err != nil {
+			return
+		} else {
+			request.SortCriteria = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -8401,30 +9370,45 @@ func (client *ScheduledRecording2) BrowseRecordTasks(RecordScheduleID string, Fi
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordScheduleID); err != nil {
-		return
-	} else {
-		request.RecordScheduleID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordScheduleID); err != nil {
+			return
+		} else {
+			request.RecordScheduleID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Filter); err != nil {
-		return
-	} else {
-		request.Filter = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Filter); err != nil {
+			return
+		} else {
+			request.Filter = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(StartingIndex); err != nil {
-		return
-	} else {
-		request.StartingIndex = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(StartingIndex); err != nil {
+			return
+		} else {
+			request.StartingIndex = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(RequestedCount); err != nil {
-		return
-	} else {
-		request.RequestedCount = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(RequestedCount); err != nil {
+			return
+		} else {
+			request.RequestedCount = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(SortCriteria); err != nil {
-		return
-	} else {
-		request.SortCriteria = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(SortCriteria); err != nil {
+			return
+		} else {
+			request.SortCriteria = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -8466,10 +9450,13 @@ func (client *ScheduledRecording2) CreateRecordSchedule(Elements string) (Record
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(Elements); err != nil {
-		return
-	} else {
-		request.Elements = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Elements); err != nil {
+			return
+		} else {
+			request.Elements = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -8507,10 +9494,13 @@ func (client *ScheduledRecording2) DeleteRecordSchedule(RecordScheduleID string)
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordScheduleID); err != nil {
-		return
-	} else {
-		request.RecordScheduleID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordScheduleID); err != nil {
+			return
+		} else {
+			request.RecordScheduleID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -8536,15 +9526,21 @@ func (client *ScheduledRecording2) GetRecordSchedule(RecordScheduleID string, Fi
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordScheduleID); err != nil {
-		return
-	} else {
-		request.RecordScheduleID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordScheduleID); err != nil {
+			return
+		} else {
+			request.RecordScheduleID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Filter); err != nil {
-		return
-	} else {
-		request.Filter = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Filter); err != nil {
+			return
+		} else {
+			request.Filter = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -8578,10 +9574,13 @@ func (client *ScheduledRecording2) EnableRecordSchedule(RecordScheduleID string)
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordScheduleID); err != nil {
-		return
-	} else {
-		request.RecordScheduleID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordScheduleID); err != nil {
+			return
+		} else {
+			request.RecordScheduleID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -8606,10 +9605,13 @@ func (client *ScheduledRecording2) DisableRecordSchedule(RecordScheduleID string
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordScheduleID); err != nil {
-		return
-	} else {
-		request.RecordScheduleID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordScheduleID); err != nil {
+			return
+		} else {
+			request.RecordScheduleID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -8634,10 +9636,13 @@ func (client *ScheduledRecording2) DeleteRecordTask(RecordTaskID string) (err er
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordTaskID); err != nil {
-		return
-	} else {
-		request.RecordTaskID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordTaskID); err != nil {
+			return
+		} else {
+			request.RecordTaskID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -8663,15 +9668,21 @@ func (client *ScheduledRecording2) GetRecordTask(RecordTaskID string, Filter str
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordTaskID); err != nil {
-		return
-	} else {
-		request.RecordTaskID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordTaskID); err != nil {
+			return
+		} else {
+			request.RecordTaskID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Filter); err != nil {
-		return
-	} else {
-		request.Filter = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Filter); err != nil {
+			return
+		} else {
+			request.Filter = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -8705,10 +9716,13 @@ func (client *ScheduledRecording2) EnableRecordTask(RecordTaskID string) (err er
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordTaskID); err != nil {
-		return
-	} else {
-		request.RecordTaskID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordTaskID); err != nil {
+			return
+		} else {
+			request.RecordTaskID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -8733,10 +9747,13 @@ func (client *ScheduledRecording2) DisableRecordTask(RecordTaskID string) (err e
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordTaskID); err != nil {
-		return
-	} else {
-		request.RecordTaskID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordTaskID); err != nil {
+			return
+		} else {
+			request.RecordTaskID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -8761,10 +9778,13 @@ func (client *ScheduledRecording2) ResetRecordTask(RecordTaskID string) (err err
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordTaskID); err != nil {
-		return
-	} else {
-		request.RecordTaskID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordTaskID); err != nil {
+			return
+		} else {
+			request.RecordTaskID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -8789,10 +9809,13 @@ func (client *ScheduledRecording2) GetRecordScheduleConflicts(RecordScheduleID s
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordScheduleID); err != nil {
-		return
-	} else {
-		request.RecordScheduleID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordScheduleID); err != nil {
+			return
+		} else {
+			request.RecordScheduleID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -8826,10 +9849,13 @@ func (client *ScheduledRecording2) GetRecordTaskConflicts(RecordTaskID string) (
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RecordTaskID); err != nil {
-		return
-	} else {
-		request.RecordTaskID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RecordTaskID); err != nil {
+			return
+		} else {
+			request.RecordTaskID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 

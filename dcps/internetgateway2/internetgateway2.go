@@ -113,15 +113,21 @@ func (client *DeviceProtection1) SendSetupMessage(ProtocolType string, InMessage
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ProtocolType); err != nil {
-		return
-	} else {
-		request.ProtocolType = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ProtocolType); err != nil {
+			return
+		} else {
+			request.ProtocolType = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalBinBase64(InMessage); err != nil {
-		return
-	} else {
-		request.InMessage = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalBinBase64(InMessage); err != nil {
+			return
+		} else {
+			request.InMessage = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -205,20 +211,29 @@ func (client *DeviceProtection1) GetRolesForAction(DeviceUDN string, ServiceId s
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(DeviceUDN); err != nil {
-		return
-	} else {
-		request.DeviceUDN = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(DeviceUDN); err != nil {
+			return
+		} else {
+			request.DeviceUDN = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(ServiceId); err != nil {
-		return
-	} else {
-		request.ServiceId = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ServiceId); err != nil {
+			return
+		} else {
+			request.ServiceId = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(ActionName); err != nil {
-		return
-	} else {
-		request.ActionName = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ActionName); err != nil {
+			return
+		} else {
+			request.ActionName = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -253,15 +268,21 @@ func (client *DeviceProtection1) GetUserLoginChallenge(ProtocolType string, Name
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ProtocolType); err != nil {
-		return
-	} else {
-		request.ProtocolType = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ProtocolType); err != nil {
+			return
+		} else {
+			request.ProtocolType = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Name); err != nil {
-		return
-	} else {
-		request.Name = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Name); err != nil {
+			return
+		} else {
+			request.Name = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -297,20 +318,29 @@ func (client *DeviceProtection1) UserLogin(ProtocolType string, Challenge []byte
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ProtocolType); err != nil {
-		return
-	} else {
-		request.ProtocolType = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ProtocolType); err != nil {
+			return
+		} else {
+			request.ProtocolType = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalBinBase64(Challenge); err != nil {
-		return
-	} else {
-		request.Challenge = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalBinBase64(Challenge); err != nil {
+			return
+		} else {
+			request.Challenge = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalBinBase64(Authenticator); err != nil {
-		return
-	} else {
-		request.Authenticator = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalBinBase64(Authenticator); err != nil {
+			return
+		} else {
+			request.Authenticator = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -382,10 +412,13 @@ func (client *DeviceProtection1) AddIdentityList(IdentityList string) (IdentityL
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(IdentityList); err != nil {
-		return
-	} else {
-		request.IdentityList = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(IdentityList); err != nil {
+			return
+		} else {
+			request.IdentityList = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -415,10 +448,13 @@ func (client *DeviceProtection1) RemoveIdentity(Identity string) (err error) {
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(Identity); err != nil {
-		return
-	} else {
-		request.Identity = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Identity); err != nil {
+			return
+		} else {
+			request.Identity = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -446,25 +482,37 @@ func (client *DeviceProtection1) SetUserLoginPassword(ProtocolType string, Name 
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(ProtocolType); err != nil {
-		return
-	} else {
-		request.ProtocolType = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(ProtocolType); err != nil {
+			return
+		} else {
+			request.ProtocolType = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(Name); err != nil {
-		return
-	} else {
-		request.Name = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Name); err != nil {
+			return
+		} else {
+			request.Name = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalBinBase64(Stored); err != nil {
-		return
-	} else {
-		request.Stored = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalBinBase64(Stored); err != nil {
+			return
+		} else {
+			request.Stored = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalBinBase64(Salt); err != nil {
-		return
-	} else {
-		request.Salt = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalBinBase64(Salt); err != nil {
+			return
+		} else {
+			request.Salt = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -490,15 +538,21 @@ func (client *DeviceProtection1) AddRolesForIdentity(Identity string, RoleList s
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(Identity); err != nil {
-		return
-	} else {
-		request.Identity = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Identity); err != nil {
+			return
+		} else {
+			request.Identity = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(RoleList); err != nil {
-		return
-	} else {
-		request.RoleList = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RoleList); err != nil {
+			return
+		} else {
+			request.RoleList = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -524,15 +578,21 @@ func (client *DeviceProtection1) RemoveRolesForIdentity(Identity string, RoleLis
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(Identity); err != nil {
-		return
-	} else {
-		request.Identity = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(Identity); err != nil {
+			return
+		} else {
+			request.Identity = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(RoleList); err != nil {
-		return
-	} else {
-		request.RoleList = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RoleList); err != nil {
+			return
+		} else {
+			request.RoleList = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -617,10 +677,13 @@ func (client *LANHostConfigManagement1) SetDHCPServerConfigurable(NewDHCPServerC
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalBoolean(NewDHCPServerConfigurable); err != nil {
-		return
-	} else {
-		request.NewDHCPServerConfigurable = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalBoolean(NewDHCPServerConfigurable); err != nil {
+			return
+		} else {
+			request.NewDHCPServerConfigurable = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -671,10 +734,13 @@ func (client *LANHostConfigManagement1) SetDHCPRelay(NewDHCPRelay bool) (err err
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalBoolean(NewDHCPRelay); err != nil {
-		return
-	} else {
-		request.NewDHCPRelay = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalBoolean(NewDHCPRelay); err != nil {
+			return
+		} else {
+			request.NewDHCPRelay = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -725,10 +791,13 @@ func (client *LANHostConfigManagement1) SetSubnetMask(NewSubnetMask string) (err
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewSubnetMask); err != nil {
-		return
-	} else {
-		request.NewSubnetMask = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewSubnetMask); err != nil {
+			return
+		} else {
+			request.NewSubnetMask = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -779,10 +848,13 @@ func (client *LANHostConfigManagement1) SetIPRouter(NewIPRouters string) (err er
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewIPRouters); err != nil {
-		return
-	} else {
-		request.NewIPRouters = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewIPRouters); err != nil {
+			return
+		} else {
+			request.NewIPRouters = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -807,10 +879,13 @@ func (client *LANHostConfigManagement1) DeleteIPRouter(NewIPRouters string) (err
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewIPRouters); err != nil {
-		return
-	} else {
-		request.NewIPRouters = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewIPRouters); err != nil {
+			return
+		} else {
+			request.NewIPRouters = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -861,10 +936,13 @@ func (client *LANHostConfigManagement1) SetDomainName(NewDomainName string) (err
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewDomainName); err != nil {
-		return
-	} else {
-		request.NewDomainName = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewDomainName); err != nil {
+			return
+		} else {
+			request.NewDomainName = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -916,15 +994,21 @@ func (client *LANHostConfigManagement1) SetAddressRange(NewMinAddress string, Ne
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewMinAddress); err != nil {
-		return
-	} else {
-		request.NewMinAddress = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewMinAddress); err != nil {
+			return
+		} else {
+			request.NewMinAddress = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewMaxAddress); err != nil {
-		return
-	} else {
-		request.NewMaxAddress = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewMaxAddress); err != nil {
+			return
+		} else {
+			request.NewMaxAddress = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -979,10 +1063,13 @@ func (client *LANHostConfigManagement1) SetReservedAddress(NewReservedAddresses 
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewReservedAddresses); err != nil {
-		return
-	} else {
-		request.NewReservedAddresses = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewReservedAddresses); err != nil {
+			return
+		} else {
+			request.NewReservedAddresses = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1007,10 +1094,13 @@ func (client *LANHostConfigManagement1) DeleteReservedAddress(NewReservedAddress
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewReservedAddresses); err != nil {
-		return
-	} else {
-		request.NewReservedAddresses = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewReservedAddresses); err != nil {
+			return
+		} else {
+			request.NewReservedAddresses = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1061,10 +1151,13 @@ func (client *LANHostConfigManagement1) SetDNSServer(NewDNSServers string) (err 
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewDNSServers); err != nil {
-		return
-	} else {
-		request.NewDNSServers = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewDNSServers); err != nil {
+			return
+		} else {
+			request.NewDNSServers = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1089,10 +1182,13 @@ func (client *LANHostConfigManagement1) DeleteDNSServer(NewDNSServers string) (e
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewDNSServers); err != nil {
-		return
-	} else {
-		request.NewDNSServers = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewDNSServers); err != nil {
+			return
+		} else {
+			request.NewDNSServers = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1203,10 +1299,13 @@ func (client *Layer3Forwarding1) SetDefaultConnectionService(NewDefaultConnectio
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewDefaultConnectionService); err != nil {
-		return
-	} else {
-		request.NewDefaultConnectionService = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewDefaultConnectionService); err != nil {
+			return
+		} else {
+			request.NewDefaultConnectionService = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1655,10 +1754,13 @@ func (client *WANCommonInterfaceConfig1) SetEnabledForInternet(NewEnabledForInte
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalBoolean(NewEnabledForInternet); err != nil {
-		return
-	} else {
-		request.NewEnabledForInternet = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalBoolean(NewEnabledForInternet); err != nil {
+			return
+		} else {
+			request.NewEnabledForInternet = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -1913,10 +2015,13 @@ func (client *WANCommonInterfaceConfig1) GetActiveConnection(NewActiveConnection
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi2(NewActiveConnectionIndex); err != nil {
-		return
-	} else {
-		request.NewActiveConnectionIndex = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(NewActiveConnectionIndex); err != nil {
+			return
+		} else {
+			request.NewActiveConnectionIndex = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2010,10 +2115,13 @@ func (client *WANDSLLinkConfig1) SetDSLLinkType(NewLinkType string) (err error) 
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewLinkType); err != nil {
-		return
-	} else {
-		request.NewLinkType = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewLinkType); err != nil {
+			return
+		} else {
+			request.NewLinkType = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2124,10 +2232,13 @@ func (client *WANDSLLinkConfig1) SetDestinationAddress(NewDestinationAddress str
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewDestinationAddress); err != nil {
-		return
-	} else {
-		request.NewDestinationAddress = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewDestinationAddress); err != nil {
+			return
+		} else {
+			request.NewDestinationAddress = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2178,10 +2289,13 @@ func (client *WANDSLLinkConfig1) SetATMEncapsulation(NewATMEncapsulation string)
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewATMEncapsulation); err != nil {
-		return
-	} else {
-		request.NewATMEncapsulation = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewATMEncapsulation); err != nil {
+			return
+		} else {
+			request.NewATMEncapsulation = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2232,10 +2346,13 @@ func (client *WANDSLLinkConfig1) SetFCSPreserved(NewFCSPreserved bool) (err erro
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalBoolean(NewFCSPreserved); err != nil {
-		return
-	} else {
-		request.NewFCSPreserved = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalBoolean(NewFCSPreserved); err != nil {
+			return
+		} else {
+			request.NewFCSPreserved = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2436,10 +2553,13 @@ func (client *WANIPConnection1) SetConnectionType(NewConnectionType string) (err
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewConnectionType); err != nil {
-		return
-	} else {
-		request.NewConnectionType = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewConnectionType); err != nil {
+			return
+		} else {
+			request.NewConnectionType = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2561,10 +2681,13 @@ func (client *WANIPConnection1) SetAutoDisconnectTime(NewAutoDisconnectTime uint
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(NewAutoDisconnectTime); err != nil {
-		return
-	} else {
-		request.NewAutoDisconnectTime = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(NewAutoDisconnectTime); err != nil {
+			return
+		} else {
+			request.NewAutoDisconnectTime = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2589,10 +2712,13 @@ func (client *WANIPConnection1) SetIdleDisconnectTime(NewIdleDisconnectTime uint
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(NewIdleDisconnectTime); err != nil {
-		return
-	} else {
-		request.NewIdleDisconnectTime = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(NewIdleDisconnectTime); err != nil {
+			return
+		} else {
+			request.NewIdleDisconnectTime = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2617,10 +2743,13 @@ func (client *WANIPConnection1) SetWarnDisconnectDelay(NewWarnDisconnectDelay ui
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(NewWarnDisconnectDelay); err != nil {
-		return
-	} else {
-		request.NewWarnDisconnectDelay = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(NewWarnDisconnectDelay); err != nil {
+			return
+		} else {
+			request.NewWarnDisconnectDelay = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2797,10 +2926,13 @@ func (client *WANIPConnection1) GetGenericPortMappingEntry(NewPortMappingIndex u
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi2(NewPortMappingIndex); err != nil {
-		return
-	} else {
-		request.NewPortMappingIndex = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(NewPortMappingIndex); err != nil {
+			return
+		} else {
+			request.NewPortMappingIndex = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2865,20 +2997,29 @@ func (client *WANIPConnection1) GetSpecificPortMappingEntry(NewRemoteHost string
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewRemoteHost); err != nil {
-		return
-	} else {
-		request.NewRemoteHost = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewRemoteHost); err != nil {
+			return
+		} else {
+			request.NewRemoteHost = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
-		return
-	} else {
-		request.NewExternalPort = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
+			return
+		} else {
+			request.NewExternalPort = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewProtocol); err != nil {
-		return
-	} else {
-		request.NewProtocol = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewProtocol); err != nil {
+			return
+		} else {
+			request.NewProtocol = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -2936,45 +3077,69 @@ func (client *WANIPConnection1) AddPortMapping(NewRemoteHost string, NewExternal
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewRemoteHost); err != nil {
-		return
-	} else {
-		request.NewRemoteHost = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewRemoteHost); err != nil {
+			return
+		} else {
+			request.NewRemoteHost = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
-		return
-	} else {
-		request.NewExternalPort = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
+			return
+		} else {
+			request.NewExternalPort = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewProtocol); err != nil {
-		return
-	} else {
-		request.NewProtocol = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewProtocol); err != nil {
+			return
+		} else {
+			request.NewProtocol = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(NewInternalPort); err != nil {
-		return
-	} else {
-		request.NewInternalPort = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(NewInternalPort); err != nil {
+			return
+		} else {
+			request.NewInternalPort = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewInternalClient); err != nil {
-		return
-	} else {
-		request.NewInternalClient = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewInternalClient); err != nil {
+			return
+		} else {
+			request.NewInternalClient = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalBoolean(NewEnabled); err != nil {
-		return
-	} else {
-		request.NewEnabled = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalBoolean(NewEnabled); err != nil {
+			return
+		} else {
+			request.NewEnabled = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewPortMappingDescription); err != nil {
-		return
-	} else {
-		request.NewPortMappingDescription = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewPortMappingDescription); err != nil {
+			return
+		} else {
+			request.NewPortMappingDescription = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(NewLeaseDuration); err != nil {
-		return
-	} else {
-		request.NewLeaseDuration = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(NewLeaseDuration); err != nil {
+			return
+		} else {
+			request.NewLeaseDuration = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3006,20 +3171,29 @@ func (client *WANIPConnection1) DeletePortMapping(NewRemoteHost string, NewExter
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewRemoteHost); err != nil {
-		return
-	} else {
-		request.NewRemoteHost = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewRemoteHost); err != nil {
+			return
+		} else {
+			request.NewRemoteHost = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
-		return
-	} else {
-		request.NewExternalPort = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
+			return
+		} else {
+			request.NewExternalPort = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewProtocol); err != nil {
-		return
-	} else {
-		request.NewProtocol = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewProtocol); err != nil {
+			return
+		} else {
+			request.NewProtocol = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3130,10 +3304,13 @@ func (client *WANIPConnection2) SetConnectionType(NewConnectionType string) (err
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewConnectionType); err != nil {
-		return
-	} else {
-		request.NewConnectionType = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewConnectionType); err != nil {
+			return
+		} else {
+			request.NewConnectionType = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3251,10 +3428,13 @@ func (client *WANIPConnection2) SetAutoDisconnectTime(NewAutoDisconnectTime uint
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(NewAutoDisconnectTime); err != nil {
-		return
-	} else {
-		request.NewAutoDisconnectTime = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(NewAutoDisconnectTime); err != nil {
+			return
+		} else {
+			request.NewAutoDisconnectTime = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3279,10 +3459,13 @@ func (client *WANIPConnection2) SetIdleDisconnectTime(NewIdleDisconnectTime uint
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(NewIdleDisconnectTime); err != nil {
-		return
-	} else {
-		request.NewIdleDisconnectTime = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(NewIdleDisconnectTime); err != nil {
+			return
+		} else {
+			request.NewIdleDisconnectTime = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3307,10 +3490,13 @@ func (client *WANIPConnection2) SetWarnDisconnectDelay(NewWarnDisconnectDelay ui
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(NewWarnDisconnectDelay); err != nil {
-		return
-	} else {
-		request.NewWarnDisconnectDelay = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(NewWarnDisconnectDelay); err != nil {
+			return
+		} else {
+			request.NewWarnDisconnectDelay = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3487,10 +3673,13 @@ func (client *WANIPConnection2) GetGenericPortMappingEntry(NewPortMappingIndex u
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi2(NewPortMappingIndex); err != nil {
-		return
-	} else {
-		request.NewPortMappingIndex = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(NewPortMappingIndex); err != nil {
+			return
+		} else {
+			request.NewPortMappingIndex = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3555,20 +3744,29 @@ func (client *WANIPConnection2) GetSpecificPortMappingEntry(NewRemoteHost string
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewRemoteHost); err != nil {
-		return
-	} else {
-		request.NewRemoteHost = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewRemoteHost); err != nil {
+			return
+		} else {
+			request.NewRemoteHost = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
-		return
-	} else {
-		request.NewExternalPort = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
+			return
+		} else {
+			request.NewExternalPort = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewProtocol); err != nil {
-		return
-	} else {
-		request.NewProtocol = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewProtocol); err != nil {
+			return
+		} else {
+			request.NewProtocol = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3626,45 +3824,69 @@ func (client *WANIPConnection2) AddPortMapping(NewRemoteHost string, NewExternal
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewRemoteHost); err != nil {
-		return
-	} else {
-		request.NewRemoteHost = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewRemoteHost); err != nil {
+			return
+		} else {
+			request.NewRemoteHost = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
-		return
-	} else {
-		request.NewExternalPort = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
+			return
+		} else {
+			request.NewExternalPort = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewProtocol); err != nil {
-		return
-	} else {
-		request.NewProtocol = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewProtocol); err != nil {
+			return
+		} else {
+			request.NewProtocol = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(NewInternalPort); err != nil {
-		return
-	} else {
-		request.NewInternalPort = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(NewInternalPort); err != nil {
+			return
+		} else {
+			request.NewInternalPort = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewInternalClient); err != nil {
-		return
-	} else {
-		request.NewInternalClient = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewInternalClient); err != nil {
+			return
+		} else {
+			request.NewInternalClient = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalBoolean(NewEnabled); err != nil {
-		return
-	} else {
-		request.NewEnabled = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalBoolean(NewEnabled); err != nil {
+			return
+		} else {
+			request.NewEnabled = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewPortMappingDescription); err != nil {
-		return
-	} else {
-		request.NewPortMappingDescription = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewPortMappingDescription); err != nil {
+			return
+		} else {
+			request.NewPortMappingDescription = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(NewLeaseDuration); err != nil {
-		return
-	} else {
-		request.NewLeaseDuration = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(NewLeaseDuration); err != nil {
+			return
+		} else {
+			request.NewLeaseDuration = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3696,20 +3918,29 @@ func (client *WANIPConnection2) DeletePortMapping(NewRemoteHost string, NewExter
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewRemoteHost); err != nil {
-		return
-	} else {
-		request.NewRemoteHost = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewRemoteHost); err != nil {
+			return
+		} else {
+			request.NewRemoteHost = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
-		return
-	} else {
-		request.NewExternalPort = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
+			return
+		} else {
+			request.NewExternalPort = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewProtocol); err != nil {
-		return
-	} else {
-		request.NewProtocol = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewProtocol); err != nil {
+			return
+		} else {
+			request.NewProtocol = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3742,25 +3973,37 @@ func (client *WANIPConnection2) DeletePortMappingRange(NewStartPort uint16, NewE
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi2(NewStartPort); err != nil {
-		return
-	} else {
-		request.NewStartPort = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(NewStartPort); err != nil {
+			return
+		} else {
+			request.NewStartPort = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(NewEndPort); err != nil {
-		return
-	} else {
-		request.NewEndPort = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(NewEndPort); err != nil {
+			return
+		} else {
+			request.NewEndPort = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewProtocol); err != nil {
-		return
-	} else {
-		request.NewProtocol = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewProtocol); err != nil {
+			return
+		} else {
+			request.NewProtocol = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalBoolean(NewManage); err != nil {
-		return
-	} else {
-		request.NewManage = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalBoolean(NewManage); err != nil {
+			return
+		} else {
+			request.NewManage = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3820,30 +4063,45 @@ func (client *WANIPConnection2) GetListOfPortMappings(NewStartPort uint16, NewEn
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi2(NewStartPort); err != nil {
-		return
-	} else {
-		request.NewStartPort = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(NewStartPort); err != nil {
+			return
+		} else {
+			request.NewStartPort = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(NewEndPort); err != nil {
-		return
-	} else {
-		request.NewEndPort = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(NewEndPort); err != nil {
+			return
+		} else {
+			request.NewEndPort = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewProtocol); err != nil {
-		return
-	} else {
-		request.NewProtocol = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewProtocol); err != nil {
+			return
+		} else {
+			request.NewProtocol = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalBoolean(NewManage); err != nil {
-		return
-	} else {
-		request.NewManage = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalBoolean(NewManage); err != nil {
+			return
+		} else {
+			request.NewManage = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(NewNumberOfPorts); err != nil {
-		return
-	} else {
-		request.NewNumberOfPorts = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(NewNumberOfPorts); err != nil {
+			return
+		} else {
+			request.NewNumberOfPorts = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -3885,45 +4143,69 @@ func (client *WANIPConnection2) AddAnyPortMapping(NewRemoteHost string, NewExter
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewRemoteHost); err != nil {
-		return
-	} else {
-		request.NewRemoteHost = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewRemoteHost); err != nil {
+			return
+		} else {
+			request.NewRemoteHost = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
-		return
-	} else {
-		request.NewExternalPort = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
+			return
+		} else {
+			request.NewExternalPort = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewProtocol); err != nil {
-		return
-	} else {
-		request.NewProtocol = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewProtocol); err != nil {
+			return
+		} else {
+			request.NewProtocol = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(NewInternalPort); err != nil {
-		return
-	} else {
-		request.NewInternalPort = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(NewInternalPort); err != nil {
+			return
+		} else {
+			request.NewInternalPort = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewInternalClient); err != nil {
-		return
-	} else {
-		request.NewInternalClient = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewInternalClient); err != nil {
+			return
+		} else {
+			request.NewInternalClient = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalBoolean(NewEnabled); err != nil {
-		return
-	} else {
-		request.NewEnabled = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalBoolean(NewEnabled); err != nil {
+			return
+		} else {
+			request.NewEnabled = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewPortMappingDescription); err != nil {
-		return
-	} else {
-		request.NewPortMappingDescription = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewPortMappingDescription); err != nil {
+			return
+		} else {
+			request.NewPortMappingDescription = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(NewLeaseDuration); err != nil {
-		return
-	} else {
-		request.NewLeaseDuration = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(NewLeaseDuration); err != nil {
+			return
+		} else {
+			request.NewLeaseDuration = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4047,30 +4329,45 @@ func (client *WANIPv6FirewallControl1) GetOutboundPinholeTimeout(RemoteHost stri
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RemoteHost); err != nil {
-		return
-	} else {
-		request.RemoteHost = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RemoteHost); err != nil {
+			return
+		} else {
+			request.RemoteHost = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(RemotePort); err != nil {
-		return
-	} else {
-		request.RemotePort = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(RemotePort); err != nil {
+			return
+		} else {
+			request.RemotePort = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(InternalClient); err != nil {
-		return
-	} else {
-		request.InternalClient = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(InternalClient); err != nil {
+			return
+		} else {
+			request.InternalClient = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(InternalPort); err != nil {
-		return
-	} else {
-		request.InternalPort = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(InternalPort); err != nil {
+			return
+		} else {
+			request.InternalPort = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(Protocol); err != nil {
-		return
-	} else {
-		request.Protocol = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(Protocol); err != nil {
+			return
+		} else {
+			request.Protocol = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4110,35 +4407,53 @@ func (client *WANIPv6FirewallControl1) AddPinhole(RemoteHost string, RemotePort 
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(RemoteHost); err != nil {
-		return
-	} else {
-		request.RemoteHost = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(RemoteHost); err != nil {
+			return
+		} else {
+			request.RemoteHost = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(RemotePort); err != nil {
-		return
-	} else {
-		request.RemotePort = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(RemotePort); err != nil {
+			return
+		} else {
+			request.RemotePort = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(InternalClient); err != nil {
-		return
-	} else {
-		request.InternalClient = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(InternalClient); err != nil {
+			return
+		} else {
+			request.InternalClient = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(InternalPort); err != nil {
-		return
-	} else {
-		request.InternalPort = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(InternalPort); err != nil {
+			return
+		} else {
+			request.InternalPort = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(Protocol); err != nil {
-		return
-	} else {
-		request.Protocol = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(Protocol); err != nil {
+			return
+		} else {
+			request.Protocol = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(LeaseTime); err != nil {
-		return
-	} else {
-		request.LeaseTime = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(LeaseTime); err != nil {
+			return
+		} else {
+			request.LeaseTime = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4174,15 +4489,21 @@ func (client *WANIPv6FirewallControl1) UpdatePinhole(UniqueID uint16, NewLeaseTi
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi2(UniqueID); err != nil {
-		return
-	} else {
-		request.UniqueID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(UniqueID); err != nil {
+			return
+		} else {
+			request.UniqueID = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(NewLeaseTime); err != nil {
-		return
-	} else {
-		request.NewLeaseTime = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(NewLeaseTime); err != nil {
+			return
+		} else {
+			request.NewLeaseTime = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4207,10 +4528,13 @@ func (client *WANIPv6FirewallControl1) DeletePinhole(UniqueID uint16) (err error
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi2(UniqueID); err != nil {
-		return
-	} else {
-		request.UniqueID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(UniqueID); err != nil {
+			return
+		} else {
+			request.UniqueID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4235,10 +4559,13 @@ func (client *WANIPv6FirewallControl1) GetPinholePackets(UniqueID uint16) (Pinho
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi2(UniqueID); err != nil {
-		return
-	} else {
-		request.UniqueID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(UniqueID); err != nil {
+			return
+		} else {
+			request.UniqueID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4268,10 +4595,13 @@ func (client *WANIPv6FirewallControl1) CheckPinholeWorking(UniqueID uint16) (IsW
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi2(UniqueID); err != nil {
-		return
-	} else {
-		request.UniqueID = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(UniqueID); err != nil {
+			return
+		} else {
+			request.UniqueID = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4368,20 +4698,29 @@ func (client *WANPOTSLinkConfig1) SetISPInfo(NewISPPhoneNumber string, NewISPInf
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewISPPhoneNumber); err != nil {
-		return
-	} else {
-		request.NewISPPhoneNumber = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewISPPhoneNumber); err != nil {
+			return
+		} else {
+			request.NewISPPhoneNumber = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewISPInfo); err != nil {
-		return
-	} else {
-		request.NewISPInfo = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewISPInfo); err != nil {
+			return
+		} else {
+			request.NewISPInfo = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewLinkType); err != nil {
-		return
-	} else {
-		request.NewLinkType = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewLinkType); err != nil {
+			return
+		} else {
+			request.NewLinkType = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4407,15 +4746,21 @@ func (client *WANPOTSLinkConfig1) SetCallRetryInfo(NewNumberOfRetries uint32, Ne
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(NewNumberOfRetries); err != nil {
-		return
-	} else {
-		request.NewNumberOfRetries = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(NewNumberOfRetries); err != nil {
+			return
+		} else {
+			request.NewNumberOfRetries = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(NewDelayBetweenRetries); err != nil {
-		return
-	} else {
-		request.NewDelayBetweenRetries = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(NewDelayBetweenRetries); err != nil {
+			return
+		} else {
+			request.NewDelayBetweenRetries = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4698,10 +5043,13 @@ func (client *WANPPPConnection1) SetConnectionType(NewConnectionType string) (er
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewConnectionType); err != nil {
-		return
-	} else {
-		request.NewConnectionType = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewConnectionType); err != nil {
+			return
+		} else {
+			request.NewConnectionType = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4761,15 +5109,21 @@ func (client *WANPPPConnection1) ConfigureConnection(NewUserName string, NewPass
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewUserName); err != nil {
-		return
-	} else {
-		request.NewUserName = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewUserName); err != nil {
+			return
+		} else {
+			request.NewUserName = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewPassword); err != nil {
-		return
-	} else {
-		request.NewPassword = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewPassword); err != nil {
+			return
+		} else {
+			request.NewPassword = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4857,10 +5211,13 @@ func (client *WANPPPConnection1) SetAutoDisconnectTime(NewAutoDisconnectTime uin
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(NewAutoDisconnectTime); err != nil {
-		return
-	} else {
-		request.NewAutoDisconnectTime = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(NewAutoDisconnectTime); err != nil {
+			return
+		} else {
+			request.NewAutoDisconnectTime = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4885,10 +5242,13 @@ func (client *WANPPPConnection1) SetIdleDisconnectTime(NewIdleDisconnectTime uin
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(NewIdleDisconnectTime); err != nil {
-		return
-	} else {
-		request.NewIdleDisconnectTime = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(NewIdleDisconnectTime); err != nil {
+			return
+		} else {
+			request.NewIdleDisconnectTime = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -4913,10 +5273,13 @@ func (client *WANPPPConnection1) SetWarnDisconnectDelay(NewWarnDisconnectDelay u
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi4(NewWarnDisconnectDelay); err != nil {
-		return
-	} else {
-		request.NewWarnDisconnectDelay = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(NewWarnDisconnectDelay); err != nil {
+			return
+		} else {
+			request.NewWarnDisconnectDelay = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5253,10 +5616,13 @@ func (client *WANPPPConnection1) GetGenericPortMappingEntry(NewPortMappingIndex 
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalUi2(NewPortMappingIndex); err != nil {
-		return
-	} else {
-		request.NewPortMappingIndex = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(NewPortMappingIndex); err != nil {
+			return
+		} else {
+			request.NewPortMappingIndex = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5321,20 +5687,29 @@ func (client *WANPPPConnection1) GetSpecificPortMappingEntry(NewRemoteHost strin
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewRemoteHost); err != nil {
-		return
-	} else {
-		request.NewRemoteHost = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewRemoteHost); err != nil {
+			return
+		} else {
+			request.NewRemoteHost = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
-		return
-	} else {
-		request.NewExternalPort = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
+			return
+		} else {
+			request.NewExternalPort = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewProtocol); err != nil {
-		return
-	} else {
-		request.NewProtocol = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewProtocol); err != nil {
+			return
+		} else {
+			request.NewProtocol = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5392,45 +5767,69 @@ func (client *WANPPPConnection1) AddPortMapping(NewRemoteHost string, NewExterna
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewRemoteHost); err != nil {
-		return
-	} else {
-		request.NewRemoteHost = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewRemoteHost); err != nil {
+			return
+		} else {
+			request.NewRemoteHost = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
-		return
-	} else {
-		request.NewExternalPort = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
+			return
+		} else {
+			request.NewExternalPort = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewProtocol); err != nil {
-		return
-	} else {
-		request.NewProtocol = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewProtocol); err != nil {
+			return
+		} else {
+			request.NewProtocol = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(NewInternalPort); err != nil {
-		return
-	} else {
-		request.NewInternalPort = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(NewInternalPort); err != nil {
+			return
+		} else {
+			request.NewInternalPort = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewInternalClient); err != nil {
-		return
-	} else {
-		request.NewInternalClient = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewInternalClient); err != nil {
+			return
+		} else {
+			request.NewInternalClient = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalBoolean(NewEnabled); err != nil {
-		return
-	} else {
-		request.NewEnabled = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalBoolean(NewEnabled); err != nil {
+			return
+		} else {
+			request.NewEnabled = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewPortMappingDescription); err != nil {
-		return
-	} else {
-		request.NewPortMappingDescription = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewPortMappingDescription); err != nil {
+			return
+		} else {
+			request.NewPortMappingDescription = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi4(NewLeaseDuration); err != nil {
-		return
-	} else {
-		request.NewLeaseDuration = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi4(NewLeaseDuration); err != nil {
+			return
+		} else {
+			request.NewLeaseDuration = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
@@ -5462,20 +5861,29 @@ func (client *WANPPPConnection1) DeletePortMapping(NewRemoteHost string, NewExte
 	}{}
 	// BEGIN Marshal arguments into request.
 
-	if v, err = soap.MarshalString(NewRemoteHost); err != nil {
-		return
-	} else {
-		request.NewRemoteHost = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewRemoteHost); err != nil {
+			return
+		} else {
+			request.NewRemoteHost = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
-		return
-	} else {
-		request.NewExternalPort = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalUi2(NewExternalPort); err != nil {
+			return
+		} else {
+			request.NewExternalPort = soap.EscapeXMLText(v)
+		}
 	}
-	if v, err = soap.MarshalString(NewProtocol); err != nil {
-		return
-	} else {
-		request.NewProtocol = soap.EscapeXMLText(v)
+	{
+		var v string
+		if v, err = soap.MarshalString(NewProtocol); err != nil {
+			return
+		} else {
+			request.NewProtocol = soap.EscapeXMLText(v)
+		}
 	}
 	// END Marshal arguments into request.
 
